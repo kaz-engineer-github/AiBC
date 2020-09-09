@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import Firebase
 
 class RootViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view.
+    
   }
-
-
+  
+  
+  @IBAction func anonymousLogin(_ sender: Any) {
+      Auth.auth().signInAnonymously() { (authResult, error) in
+          if error != nil{
+              print("Auth Error :\(error)")
+          } else {
+              print("success login:\(authResult)")
+              self.performSegue(withIdentifier: "tabBarController", sender: nil)
+          }
+          
+      }
+  }
+  
 }
 
