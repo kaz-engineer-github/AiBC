@@ -53,21 +53,43 @@
             </objects>
             <point key="canvasLocation" x="2852" y="458"/>
         </scene>
-        <!--Item 1-->
+        <!--HOME-->
         <scene sceneID="1nx-wA-rFK">
             <objects>
-                <viewController id="rln-YP-MEy" sceneMemberID="viewController">
+                <viewController id="rln-YP-MEy" customClass="ItemsViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dh5-lh-RC9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eNg-ld-P4w">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="BuA-Xu-3ci">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BuA-Xu-3ci" id="QHN-qV-28S">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="eNg-ld-P4w" firstAttribute="leading" secondItem="3Kl-AT-41B" secondAttribute="leading" id="5EX-IW-BNG"/>
+                            <constraint firstItem="eNg-ld-P4w" firstAttribute="top" secondItem="3Kl-AT-41B" secondAttribute="top" id="a8l-JK-Khs"/>
+                            <constraint firstItem="eNg-ld-P4w" firstAttribute="bottom" secondItem="3Kl-AT-41B" secondAttribute="bottom" id="g4G-pO-tLM"/>
+                            <constraint firstItem="eNg-ld-P4w" firstAttribute="trailing" secondItem="3Kl-AT-41B" secondAttribute="trailing" id="yZ5-iA-2aj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="3Kl-AT-41B"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 1" id="me9-lz-VWE"/>
+                    <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="me9-lz-VWE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVH-r5-W3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="-206"/>
+            <point key="canvasLocation" x="2852" y="-206.44677661169416"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dpe-Ft-vhb">
@@ -107,4 +129,7 @@
             <point key="canvasLocation" x="138.40000000000001" y="126.38680659670166"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="house" catalog="system" width="128" height="110"/>
+    </resources>
 </document>
