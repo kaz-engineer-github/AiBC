@@ -4,3 +4,6 @@
 # Carthage
 Carthage/Checkouts
 Carthage/Build
+
+# setting
+xcuserdata/
