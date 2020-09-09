@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */; };
 		74B9B97B2507B8AA0037D96F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97A2507B8AA0037D96F /* AppDelegate.swift */; };
 		74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97C2507B8AA0037D96F /* SceneDelegate.swift */; };
 		74B9B97F2507B8AA0037D96F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97E2507B8AA0037D96F /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B9B9772507B8AA0037D96F /* AiBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B9B97A2507B8AA0037D96F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B9B97C2507B8AA0037D96F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -26,6 +28,8 @@
 		74B9B9862507B8AB0037D96F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74B9B9882507B8AB0037D96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74B9B98E2507BEB00037D96F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		95CE6E0716CFD01A77C793DF /* Pods-AiBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.debug.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.debug.xcconfig"; sourceTree = "<group>"; };
+		CAB3C2D6764B4B6148231E72 /* Pods-AiBC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.release.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		68D95A39C1D33E79778E8053 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				95CE6E0716CFD01A77C793DF /* Pods-AiBC.debug.xcconfig */,
+				CAB3C2D6764B4B6148231E72 /* Pods-AiBC.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		749B9F8F2508A4D000FEC5FD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		74B9B96E2507B8AA0037D96F = {
 			isa = PBXGroup;
 			children = (
 				74B9B9792507B8AA0037D96F /* AiBC */,
 				74B9B9782507B8AA0037D96F /* Products */,
+				749B9F8F2508A4D000FEC5FD /* Frameworks */,
+				68D95A39C1D33E79778E8053 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,9 +101,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 74B9B98B2507B8AB0037D96F /* Build configuration list for PBXNativeTarget "AiBC" */;
 			buildPhases = (
+				8CD5B82CBB78B04792D47211 /* [CP] Check Pods Manifest.lock */,
 				74B9B9732507B8AA0037D96F /* Sources */,
 				74B9B9742507B8AA0037D96F /* Frameworks */,
 				74B9B9752507B8AA0037D96F /* Resources */,
+				F59D68C66E7E7BCFE32CEC45 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +162,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8CD5B82CBB78B04792D47211 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AiBC-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F59D68C66E7E7BCFE32CEC45 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AiBC/Pods-AiBC-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AiBC/Pods-AiBC-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AiBC/Pods-AiBC-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		74B9B9732507B8AA0037D96F /* Sources */ = {
@@ -286,15 +354,21 @@
 		};
 		74B9B98C2507B8AB0037D96F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95CE6E0716CFD01A77C793DF /* Pods-AiBC.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5VN4N5GJ44;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AiBC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazufumiyoshimoto.AiBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -304,15 +378,21 @@
 		};
 		74B9B98D2507B8AB0037D96F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAB3C2D6764B4B6148231E72 /* Pods-AiBC.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5VN4N5GJ44;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = AiBC/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazufumiyoshimoto.AiBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
