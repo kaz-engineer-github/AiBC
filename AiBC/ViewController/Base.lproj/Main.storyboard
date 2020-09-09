@@ -21,7 +21,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
-                                    <segue destination="FWA-VZ-S9k" kind="show" id="0vl-FY-XY0"/>
+                                    <action selector="anonymousLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qoF-2s-MIt"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -29,6 +29,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="HI5-Gk-yfA"/>
+                    <connections>
+                        <segue destination="FWA-VZ-S9k" kind="show" identifier="tabBarController" id="gy7-9v-N1v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
