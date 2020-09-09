@@ -7,5 +7,6 @@ target 'AiBC' do
 
   # Pods for AiBC
   pod 'Firebase'
-
+  pod 'Firebase/Auth'
+  pod 'Firebase/Core'
 end
