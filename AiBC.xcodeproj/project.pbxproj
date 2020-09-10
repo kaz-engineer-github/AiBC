@@ -16,6 +16,8 @@
 		74B9B9872507B8AB0037D96F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74B9B9852507B8AB0037D96F /* LaunchScreen.storyboard */; };
 		74B9B98F2507BEB00037D96F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74B9B98E2507BEB00037D96F /* GoogleService-Info.plist */; };
 		74D018F3250998E2004DC3C7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F2250998E2004DC3C7 /* ItemsViewController.swift */; };
+		74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */; };
+		74D018F82509A164004DC3C7 /* ItemsViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		74B9B9882507B8AB0037D96F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74B9B98E2507BEB00037D96F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74D018F2250998E2004DC3C7 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
+		74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
+		74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewControllerCell.xib; sourceTree = "<group>"; };
 		95CE6E0716CFD01A77C793DF /* Pods-AiBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.debug.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.debug.xcconfig"; sourceTree = "<group>"; };
 		CAB3C2D6764B4B6148231E72 /* Pods-AiBC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.release.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +73,7 @@
 				74B9B97E2507B8AA0037D96F /* RootViewController.swift */,
 				74B9B9802507B8AA0037D96F /* Main.storyboard */,
 				74D018F2250998E2004DC3C7 /* ItemsViewController.swift */,
+				74D018F42509A0B2004DC3C7 /* ItemsViewControllerCell */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -103,6 +108,15 @@
 				74B9B98E2507BEB00037D96F /* GoogleService-Info.plist */,
 			);
 			path = AiBC;
+			sourceTree = "<group>";
+		};
+		74D018F42509A0B2004DC3C7 /* ItemsViewControllerCell */ = {
+			isa = PBXGroup;
+			children = (
+				74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */,
+				74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */,
+			);
+			path = ItemsViewControllerCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,6 +180,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74B9B9872507B8AB0037D96F /* LaunchScreen.storyboard in Resources */,
+				74D018F82509A164004DC3C7 /* ItemsViewControllerCell.xib in Resources */,
 				74B9B98F2507BEB00037D96F /* GoogleService-Info.plist in Resources */,
 				74B9B9842507B8AB0037D96F /* Assets.xcassets in Resources */,
 				74B9B9822507B8AA0037D96F /* Main.storyboard in Resources */,
@@ -225,6 +240,7 @@
 				74D018F3250998E2004DC3C7 /* ItemsViewController.swift in Sources */,
 				74B9B97B2507B8AA0037D96F /* AppDelegate.swift in Sources */,
 				74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */,
+				74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
