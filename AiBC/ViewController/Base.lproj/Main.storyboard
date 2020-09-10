@@ -86,6 +86,9 @@
                         <viewLayoutGuide key="safeArea" id="3Kl-AT-41B"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="me9-lz-VWE"/>
+                    <connections>
+                        <outlet property="tableView" destination="eNg-ld-P4w" id="iJU-pG-oVD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVH-r5-W3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
