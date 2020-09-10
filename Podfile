@@ -9,4 +9,5 @@ target 'AiBC' do
   pod 'Firebase'
   pod 'Firebase/Auth'
   pod 'Firebase/Core'
+  pod 'Kingfisher'
 end
