@@ -1,9 +1,5 @@
 # plist
 *.plist
 
-# Carthage
-Carthage/Checkouts
-Carthage/Build
-
 # setting
 xcuserdata/
