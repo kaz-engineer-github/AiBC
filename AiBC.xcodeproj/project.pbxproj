@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */; };
+		74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */; };
 		74B9B97B2507B8AA0037D96F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97A2507B8AA0037D96F /* AppDelegate.swift */; };
 		74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97C2507B8AA0037D96F /* SceneDelegate.swift */; };
 		74B9B97F2507B8AA0037D96F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97E2507B8AA0037D96F /* RootViewController.swift */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCellType.swift; sourceTree = "<group>"; };
 		74B9B9772507B8AA0037D96F /* AiBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B9B97A2507B8AA0037D96F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B9B97C2507B8AA0037D96F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				74B9B9802507B8AA0037D96F /* Main.storyboard */,
 				74D018F2250998E2004DC3C7 /* ItemsViewController.swift */,
 				74D018F42509A0B2004DC3C7 /* ItemsViewControllerCell */,
+				74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -237,6 +240,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74B9B97F2507B8AA0037D96F /* RootViewController.swift in Sources */,
+				74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */,
 				74D018F3250998E2004DC3C7 /* ItemsViewController.swift in Sources */,
 				74B9B97B2507B8AA0037D96F /* AppDelegate.swift in Sources */,
 				74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */,

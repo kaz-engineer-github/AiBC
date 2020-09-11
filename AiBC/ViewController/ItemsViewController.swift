@@ -11,7 +11,7 @@ import UIKit
 class ItemsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    private var dataSource: [String] = []
+    private var dataSource: [ItemsViewControllerCellType] = []
   
     override func viewDidLoad() {
         super.viewDidLoad()
