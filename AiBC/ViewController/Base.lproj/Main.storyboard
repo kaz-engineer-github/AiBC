@@ -88,11 +88,47 @@
                     <tabBarItem key="tabBarItem" title="HOME" image="house" catalog="system" id="me9-lz-VWE"/>
                     <connections>
                         <outlet property="tableView" destination="eNg-ld-P4w" id="iJU-pG-oVD"/>
+                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="X3O-vl-14K"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVH-r5-W3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2852" y="-206.44677661169416"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="p7L-Xw-F1p">
+            <objects>
+                <viewController id="uq8-mx-Aa1" customClass="WebViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bFD-va-oxb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfF-S6-5sD">
+                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vfF-S6-5sD" firstAttribute="bottom" secondItem="I77-sN-vjY" secondAttribute="bottom" id="6vX-mF-qaO"/>
+                            <constraint firstItem="vfF-S6-5sD" firstAttribute="top" secondItem="I77-sN-vjY" secondAttribute="top" id="E2j-q6-9fw"/>
+                            <constraint firstItem="vfF-S6-5sD" firstAttribute="trailing" secondItem="I77-sN-vjY" secondAttribute="trailing" id="b1y-xt-4xC"/>
+                            <constraint firstItem="vfF-S6-5sD" firstAttribute="leading" secondItem="I77-sN-vjY" secondAttribute="leading" id="chP-3E-YW4"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="I77-sN-vjY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="vk2-ei-Q8G"/>
+                    <connections>
+                        <outlet property="webView" destination="vfF-S6-5sD" id="dfA-cv-4u2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lFw-yX-Fem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3709.5999999999999" y="-204.64767616191907"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dpe-Ft-vhb">
