@@ -10,6 +10,9 @@
 		4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */; };
 		74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */; };
 		74972D88250B96A800598B86 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D87250B96A800598B86 /* ItemsModel.swift */; };
+		74972D8A250B977700598B86 /* QiitaItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D89250B977700598B86 /* QiitaItems.swift */; };
+		74972D8C250B97A500598B86 /* QiitaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D8B250B97A500598B86 /* QiitaUser.swift */; };
+		74972D8E250B97BF00598B86 /* QiitaTags.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D8D250B97BF00598B86 /* QiitaTags.swift */; };
 		74B9B97B2507B8AA0037D96F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97A2507B8AA0037D96F /* AppDelegate.swift */; };
 		74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97C2507B8AA0037D96F /* SceneDelegate.swift */; };
 		74B9B97F2507B8AA0037D96F /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74B9B97E2507B8AA0037D96F /* RootViewController.swift */; };
@@ -26,6 +29,9 @@
 		1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCellType.swift; sourceTree = "<group>"; };
 		74972D87250B96A800598B86 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
+		74972D89250B977700598B86 /* QiitaItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItems.swift; sourceTree = "<group>"; };
+		74972D8B250B97A500598B86 /* QiitaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaUser.swift; sourceTree = "<group>"; };
+		74972D8D250B97BF00598B86 /* QiitaTags.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaTags.swift; sourceTree = "<group>"; };
 		74B9B9772507B8AA0037D96F /* AiBC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AiBC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74B9B97A2507B8AA0037D96F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74B9B97C2507B8AA0037D96F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +88,9 @@
 		749BFED42508B48600A3753B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				74972D8D250B97BF00598B86 /* QiitaTags.swift */,
+				74972D8B250B97A500598B86 /* QiitaUser.swift */,
+				74972D89250B977700598B86 /* QiitaItems.swift */,
 				74B9B97E2507B8AA0037D96F /* RootViewController.swift */,
 				74B9B9802507B8AA0037D96F /* Main.storyboard */,
 				74D018F2250998E2004DC3C7 /* ItemsViewController.swift */,
@@ -252,11 +261,14 @@
 			files = (
 				74B9B97F2507B8AA0037D96F /* RootViewController.swift in Sources */,
 				74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */,
+				74972D8C250B97A500598B86 /* QiitaUser.swift in Sources */,
 				74D018F3250998E2004DC3C7 /* ItemsViewController.swift in Sources */,
 				74972D88250B96A800598B86 /* ItemsModel.swift in Sources */,
 				74B9B97B2507B8AA0037D96F /* AppDelegate.swift in Sources */,
+				74972D8A250B977700598B86 /* QiitaItems.swift in Sources */,
 				74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */,
 				74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */,
+				74972D8E250B97BF00598B86 /* QiitaTags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
