@@ -12,10 +12,12 @@ class ItemsViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     private var dataSource: [ItemsViewControllerCellType] = []
+    private let itemsModel = ItemsModel()
   
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        itemsModel.getQiitaData()
     }
 }
 
