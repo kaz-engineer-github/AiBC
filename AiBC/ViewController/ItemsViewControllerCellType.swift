@@ -9,6 +9,6 @@
 import Foundation
 
 enum ItemsViewControllerCellType {
-    case item
+    case item(with: QiitaItems)
     case indicator
 }

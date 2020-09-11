@@ -17,7 +17,16 @@ class ItemsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        itemsModel.delegate = self
         itemsModel.getQiitaData()
+    }
+}
+
+extension ItemsViewController: ItemsModelDelegate {
+    func getQiitaData(qiitaItems: [QiitaItems]) {
+        let dataSource = qiitaItems.map { ItemsViewControllerCellType.item(with: $0) }
+        self.dataSource = dataSource
+        tableView.reloadData()
     }
 }
 

@@ -94,8 +94,8 @@
 				74B9B97E2507B8AA0037D96F /* RootViewController.swift */,
 				74B9B9802507B8AA0037D96F /* Main.storyboard */,
 				74D018F2250998E2004DC3C7 /* ItemsViewController.swift */,
-				74D018F42509A0B2004DC3C7 /* ItemsViewControllerCell */,
 				74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */,
+				74D018F42509A0B2004DC3C7 /* ItemsViewControllerCell */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
