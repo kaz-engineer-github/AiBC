@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */; };
+		7429ACA32518C48000341657 /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429ACA22518C48000341657 /* ArticleData.swift */; };
 		748B3F2325183AB600F44B1F /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B3F2225183AB600F44B1F /* BookmarkModel.swift */; };
 		74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */; };
 		74972D88250B96A800598B86 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D87250B96A800598B86 /* ItemsModel.swift */; };
@@ -31,6 +32,7 @@
 
 /* Begin PBXFileReference section */
 		1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7429ACA22518C48000341657 /* ArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
 		748B3F2225183AB600F44B1F /* BookmarkModel.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; tabWidth = 4; };
 		74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCellType.swift; sourceTree = "<group>"; };
 		74972D87250B96A800598B86 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				74972D87250B96A800598B86 /* ItemsModel.swift */,
 				748B3F2225183AB600F44B1F /* BookmarkModel.swift */,
+				7429ACA22518C48000341657 /* ArticleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7429ACA32518C48000341657 /* ArticleData.swift in Sources */,
 				74B9B97F2507B8AA0037D96F /* RootViewController.swift in Sources */,
 				748B3F2325183AB600F44B1F /* BookmarkModel.swift in Sources */,
 				74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */,
