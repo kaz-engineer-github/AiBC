@@ -11,15 +11,21 @@ import WebKit
 
 class WebViewController: UIViewController {
 
-  @IBOutlet weak var webView: WKWebView!
-  var url: URL?
+    @IBOutlet weak var webView: WKWebView!
+    let bookmark = BookmarkModel()
+    var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", bookmarkCount: 0, commentsCount: 0, url: "")
   
     override func viewDidLoad() {
         super.viewDidLoad()
-      
-        let request = URLRequest(url: url!)
+        guard let url = URL(string: articleData.url) else { return }
+        let request = URLRequest(url: url)
         webView.load(request)
     }
     
-
+    @IBAction func bookmarkPress(_ sender: Any) {
+        let bookmarkTitle = articleData.title
+        guard let bookmarkProfileImageURL = articleData.profileImageURL else { return }
+        let bookmarkURL = articleData.url
+        bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: "", tags: "", bookmarkCount: 0, commentsCount: 0,url: bookmarkURL)
+    }
 }

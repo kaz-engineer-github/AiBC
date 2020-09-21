@@ -13,8 +13,8 @@ class ItemsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var dataSource: [ItemsViewControllerCellType] = []
     private let itemsModel = ItemsModel()
-    var articleUrl: URL?
-  
+    var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", bookmarkCount: 0, commentsCount: 0, url: "")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
@@ -74,17 +74,22 @@ extension ItemsViewController: UITableViewDelegate {
         
             switch cellType {
             case .item(let item):
-                guard let url = URL(string: item.url) else { return }
-                articleUrl = url
+                articleData.title = item.title
+                articleData.profileImageURL = item.user.profileImageURL
+                articleData.url = item.url
                 self.performSegue(withIdentifier: "WebViewController", sender: nil)
             default:
                 break
             }
     }
+  
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WebViewController" {
             let webVC: WebViewController = (segue.destination as? WebViewController)!
-            webVC.url = articleUrl
+            guard let imageURL =  articleData.profileImageURL else { return }
+            webVC.articleData.title = articleData.title
+            webVC.articleData.profileImageURL = imageURL
+            webVC.articleData.url = articleData.url
         }
     }
 }
