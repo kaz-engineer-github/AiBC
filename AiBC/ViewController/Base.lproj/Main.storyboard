@@ -51,7 +51,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQc-WD-VsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="458"/>
+            <point key="canvasLocation" x="2830" y="645"/>
         </scene>
         <!--HOME-->
         <scene sceneID="1nx-wA-rFK">
@@ -93,7 +93,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVH-r5-W3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2852" y="-206.44677661169416"/>
+            <point key="canvasLocation" x="2830" y="-614"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="p7L-Xw-F1p">
@@ -147,7 +147,45 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFw-yX-Fem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3709.5999999999999" y="-204.64767616191907"/>
+            <point key="canvasLocation" x="3718" y="-615"/>
+        </scene>
+        <!--MY STOCK-->
+        <scene sceneID="7j2-aw-6Fk">
+            <objects>
+                <viewController id="UAs-Fz-OGn" customClass="ItemsStockViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P0P-oa-czT">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="bCX-wc-1FL">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="H0f-zq-hvn">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="H0f-zq-hvn" id="rHt-WD-J2n">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="4ib-N8-Kpp" firstAttribute="bottom" secondItem="bCX-wc-1FL" secondAttribute="bottom" id="lIB-1a-1Lz"/>
+                            <constraint firstItem="bCX-wc-1FL" firstAttribute="leading" secondItem="4ib-N8-Kpp" secondAttribute="leading" id="u0M-be-SxC"/>
+                            <constraint firstItem="4ib-N8-Kpp" firstAttribute="trailing" secondItem="bCX-wc-1FL" secondAttribute="trailing" id="xdq-y0-SxD"/>
+                            <constraint firstItem="bCX-wc-1FL" firstAttribute="top" secondItem="4ib-N8-Kpp" secondAttribute="top" id="xtc-P6-chI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4ib-N8-Kpp"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="MY STOCK" image="bookmark" catalog="system" id="7fH-hv-6Nb"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UKS-x7-gie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3718" y="126"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="dpe-Ft-vhb">
@@ -162,6 +200,7 @@
                     <connections>
                         <segue destination="rln-YP-MEy" kind="relationship" relationship="viewControllers" id="Njy-EF-uqY"/>
                         <segue destination="PiD-fu-9Op" kind="relationship" relationship="viewControllers" id="qXP-Ji-fLi"/>
+                        <segue destination="UAs-Fz-OGn" kind="relationship" relationship="viewControllers" id="Rus-vL-8g6"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siP-pZ-fzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
