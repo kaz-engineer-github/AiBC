@@ -13,7 +13,7 @@ class WebViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     let bookmark = BookmarkModel()
-    var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", bookmarkCount: 0, commentsCount: 0, url: "")
+    var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +25,11 @@ class WebViewController: UIViewController {
     @IBAction func bookmarkPress(_ sender: Any) {
         let bookmarkTitle = articleData.title
         guard let bookmarkProfileImageURL = articleData.profileImageURL else { return }
+      let bookmarkBody = articleData.body
+//      let bookmarkTags = articleData.tags
+      let bookmarkLikesCount:Int = articleData.likesCount
+      let bookmarkCommentsCount:Int = articleData.commentsCount
         let bookmarkURL = articleData.url
-        bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: "", tags: "", bookmarkCount: 0, commentsCount: 0,url: bookmarkURL)
+      bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: "", likesCount: bookmarkLikesCount, commentsCount: bookmarkCommentsCount,url: bookmarkURL)
     }
 }

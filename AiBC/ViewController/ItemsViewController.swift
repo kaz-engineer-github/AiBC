@@ -13,7 +13,7 @@ class ItemsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     private var dataSource: [ItemsViewControllerCellType] = []
     private let itemsModel = ItemsModel()
-    var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", bookmarkCount: 0, commentsCount: 0, url: "")
+    var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,7 +76,12 @@ extension ItemsViewController: UITableViewDelegate {
             case .item(let item):
                 articleData.title = item.title
                 articleData.profileImageURL = item.user.profileImageURL
+                articleData.body = item.body
+//                articleData.tags = item.tags.reduce("") { $0 + "#\($1.name) " }
+                articleData.likesCount = item.likesCount
+                articleData.commentsCount = item.commentsCount
                 articleData.url = item.url
+              
                 self.performSegue(withIdentifier: "WebViewController", sender: nil)
             default:
                 break
@@ -89,6 +94,10 @@ extension ItemsViewController: UITableViewDelegate {
             guard let imageURL =  articleData.profileImageURL else { return }
             webVC.articleData.title = articleData.title
             webVC.articleData.profileImageURL = imageURL
+            webVC.articleData.body = articleData.body
+//          webVC.articleData.tags = articleData.tags
+            webVC.articleData.likesCount = articleData.likesCount
+            webVC.articleData.commentsCount = articleData.commentsCount
             webVC.articleData.url = articleData.url
         }
     }
