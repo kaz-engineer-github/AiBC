@@ -13,7 +13,7 @@ struct ArticleData {
     var profileImageURL: String?
     var body: String
     var tags: String
-    var bookmarkCount: Int
+    var likesCount: Int
     var commentsCount: Int
     var url: String
   
@@ -21,16 +21,16 @@ struct ArticleData {
     var profileImageURLArray: [String] = []
     var bodyArray: [String] = []
     var tagsArray: [String] = []
-    var bookmarkCountArray: [Int] = []
+    var likesCountArray: [Int] = []
     var commentsCountArray: [Int] = []
     var urlArray: [String] = []
   
-    init(title: String, profileImageURL: String?, body: String, tags: String, bookmarkCount: Int, commentsCount: Int, url:String) {
+    init(title: String, profileImageURL: String?, body: String, tags: String, likesCount: Int, commentsCount: Int, url:String) {
     self.title = title
     self.profileImageURL = profileImageURL
     self.body = body
     self.tags = tags
-    self.bookmarkCount = bookmarkCount
+    self.likesCount = likesCount
     self.commentsCount = commentsCount
     self.url = url
   }
