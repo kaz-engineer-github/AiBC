@@ -12,13 +12,23 @@ class ItemsStockViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     private var dataSource: [ItemsViewControllerCellType] = []
-    var fetchArticleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", bookmarkCount: 0, commentsCount: 0, url: "")
+    var fetchArticleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
+    private let itemsStockModel = BookmarkModel()
   
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        itemsStockModel.delegate = self
+//        itemsStockModel.fetchBookmarkArticles()
     }
-    
+}
+
+extension ItemsStockViewController: BookmarkModelDelegate {
+    func fetchBookmarkArticles(fetchData: [QiitaItems]) {
+        let dataSource = fetchData.map { ItemsViewControllerCellType.item(with: $0) }
+        self.dataSource = dataSource
+        tableView.reloadData()
+    }
 }
 
 extension ItemsStockViewController {

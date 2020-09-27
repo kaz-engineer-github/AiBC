@@ -24,7 +24,7 @@ final class BookmarkModel {
         self.articleData.titleArray.append(title)
         self.articleData.profileImageURLArray.append(profileImageURL)
         self.articleData.bodyArray.append(body)
-//        self.articleData.tagsArray.append(tags)
+        self.articleData.tagsArray.append(tags)
         self.articleData.likesCountArray.append(likesCount)
         self.articleData.commentsCountArray.append(commentsCount)
         self.articleData.urlArray.append(url)
@@ -33,7 +33,7 @@ final class BookmarkModel {
             "title": FieldValue.arrayUnion(articleData.titleArray),
             "profileImage": FieldValue.arrayUnion(articleData.profileImageURLArray),
             "body": FieldValue.arrayUnion(articleData.bodyArray),
-//            "tags": FieldValue.arrayUnion(articleData.bodyArray),
+            "tags": FieldValue.arrayUnion(articleData.tagsArray),
             "likesCount": FieldValue.arrayUnion(articleData.likesCountArray),
             "commentsCount": FieldValue.arrayUnion(articleData.commentsCountArray),
             "url": FieldValue.arrayUnion(articleData.urlArray)
@@ -43,7 +43,7 @@ final class BookmarkModel {
                     "title": self.articleData.titleArray,
                     "profileImage": self.articleData.profileImageURLArray,
                     "body": self.articleData.bodyArray,
-//                    "tags": self.articleData.tagsArray,
+                    "tags": self.articleData.tagsArray,
                     "likesCount": self.articleData.likesCountArray,
                     "commentsCount": self.articleData.commentsCountArray,
                     "url": self.articleData.urlArray
