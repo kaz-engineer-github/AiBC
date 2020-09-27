@@ -9,5 +9,5 @@
 import Foundation
 
 struct QiitaTags: Decodable {
-  let name: String
+    let name: String
 }

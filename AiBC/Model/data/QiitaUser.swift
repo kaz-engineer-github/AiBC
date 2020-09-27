@@ -9,9 +9,9 @@
 import Foundation
 
 struct QiitaUser: Decodable {
-  let profileImageURL: String
+    let profileImageURL: String
   
-  private enum CodingKeys: String, CodingKey {
-    case profileImageURL = "profile_image_url"
-  }
+    private enum CodingKeys: String, CodingKey {
+        case profileImageURL = "profile_image_url"
+    }
 }

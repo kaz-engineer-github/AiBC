@@ -26,12 +26,12 @@ struct ArticleData {
     var urlArray: [String] = []
   
     init(title: String, profileImageURL: String?, body: String, tags: String, likesCount: Int, commentsCount: Int, url:String) {
-    self.title = title
-    self.profileImageURL = profileImageURL
-    self.body = body
-    self.tags = tags
-    self.likesCount = likesCount
-    self.commentsCount = commentsCount
-    self.url = url
-  }
+        self.title = title
+        self.profileImageURL = profileImageURL
+        self.body = body
+        self.tags = tags
+        self.likesCount = likesCount
+        self.commentsCount = commentsCount
+        self.url = url
+    }
 }
