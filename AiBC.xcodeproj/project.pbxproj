@@ -81,9 +81,19 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		7429ACA42519FD0600341657 /* data */ = {
+		748874852520443200BA23E5 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				74972D87250B96A800598B86 /* ItemsModel.swift */,
+				748B3F2225183AB600F44B1F /* BookmarkModel.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		748874862520444900BA23E5 /* data */ = {
+			isa = PBXGroup;
+			children = (
+				7429ACA22518C48000341657 /* ArticleData.swift */,
 				74972D8D250B97BF00598B86 /* QiitaTags.swift */,
 				74972D8B250B97A500598B86 /* QiitaUser.swift */,
 				74972D89250B977700598B86 /* QiitaItems.swift */,
@@ -94,9 +104,8 @@
 		74972D86250B968500598B86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				74972D87250B96A800598B86 /* ItemsModel.swift */,
-				748B3F2225183AB600F44B1F /* BookmarkModel.swift */,
-				7429ACA22518C48000341657 /* ArticleData.swift */,
+				748874852520443200BA23E5 /* Network */,
+				748874862520444900BA23E5 /* data */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -121,7 +130,6 @@
 		749BFED42508B48600A3753B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				7429ACA42519FD0600341657 /* data */,
 				74B9B97E2507B8AA0037D96F /* RootViewController.swift */,
 				74B9B9802507B8AA0037D96F /* Main.storyboard */,
 				74D018F2250998E2004DC3C7 /* ItemsViewController.swift */,
