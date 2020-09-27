@@ -29,6 +29,7 @@
 		74D018F3250998E2004DC3C7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F2250998E2004DC3C7 /* ItemsViewController.swift */; };
 		74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */; };
 		74D018F82509A164004DC3C7 /* ItemsViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */; };
+		74DD6E4725204A7900010FF3 /* DBConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD6E4625204A7900010FF3 /* DBConverter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		74D018F2250998E2004DC3C7 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
 		74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewControllerCell.xib; sourceTree = "<group>"; };
+		74DD6E4625204A7900010FF3 /* DBConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBConverter.swift; sourceTree = "<group>"; };
 		95CE6E0716CFD01A77C793DF /* Pods-AiBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.debug.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.debug.xcconfig"; sourceTree = "<group>"; };
 		CAB3C2D6764B4B6148231E72 /* Pods-AiBC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.release.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +99,7 @@
 				74972D8D250B97BF00598B86 /* QiitaTags.swift */,
 				74972D8B250B97A500598B86 /* QiitaUser.swift */,
 				74972D89250B977700598B86 /* QiitaItems.swift */,
+				74DD6E4625204A7900010FF3 /* DBConverter.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -312,6 +315,7 @@
 				74972D88250B96A800598B86 /* ItemsModel.swift in Sources */,
 				74B9B97B2507B8AA0037D96F /* AppDelegate.swift in Sources */,
 				74972D8A250B977700598B86 /* QiitaItems.swift in Sources */,
+				74DD6E4725204A7900010FF3 /* DBConverter.swift in Sources */,
 				74972D95250BA17C00598B86 /* WebViewController.swift in Sources */,
 				74972D92250B9DD300598B86 /* ItemsViewControllerIndicatorCell.swift in Sources */,
 				74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */,
