@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 
 protocol BookmarkModelDelegate: AnyObject {
-    func fetchBookmarkArticles(fetchData: [QiitaItems])
+    func fetchBookmarkArticles(dataDescription: String)
 }
 
 final class BookmarkModel {
@@ -50,5 +50,17 @@ final class BookmarkModel {
                    ], merge: true)
                }
            }
+    }
+    
+    func fetchBookmarkArticles() {
+        let docRef = db.collection("users").document("bookmark_articles")
+        docRef.getDocument { (document, error) in
+            if let document = document, document.exists {
+                let dataDescription = document.data()?.values
+                print("Document data: \(dataDescription!)")
+                } else {
+                    print("Document does not exist")
+                }
+        }
     }
 }
