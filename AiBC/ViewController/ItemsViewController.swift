@@ -95,7 +95,7 @@ extension ItemsViewController: UITableViewDelegate {
             webVC.articleData.title = articleData.title
             webVC.articleData.profileImageURL = imageURL
             webVC.articleData.body = articleData.body
-          webVC.articleData.tags = articleData.tags
+            webVC.articleData.tags = articleData.tags
             webVC.articleData.likesCount = articleData.likesCount
             webVC.articleData.commentsCount = articleData.commentsCount
             webVC.articleData.url = articleData.url
