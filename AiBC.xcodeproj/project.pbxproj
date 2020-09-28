@@ -30,6 +30,8 @@
 		74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */; };
 		74D018F82509A164004DC3C7 /* ItemsViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */; };
 		74DD6E4725204A7900010FF3 /* DBConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD6E4625204A7900010FF3 /* DBConverter.swift */; };
+		74DD6E4D2521886D00010FF3 /* ItemsStockViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD6E4B2521886D00010FF3 /* ItemsStockViewControllerCell.swift */; };
+		74DD6E4E2521886D00010FF3 /* ItemsStockViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74DD6E4C2521886D00010FF3 /* ItemsStockViewControllerCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +60,8 @@
 		74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
 		74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewControllerCell.xib; sourceTree = "<group>"; };
 		74DD6E4625204A7900010FF3 /* DBConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBConverter.swift; sourceTree = "<group>"; };
+		74DD6E4B2521886D00010FF3 /* ItemsStockViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsStockViewControllerCell.swift; sourceTree = "<group>"; };
+		74DD6E4C2521886D00010FF3 /* ItemsStockViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsStockViewControllerCell.xib; sourceTree = "<group>"; };
 		95CE6E0716CFD01A77C793DF /* Pods-AiBC.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.debug.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.debug.xcconfig"; sourceTree = "<group>"; };
 		CAB3C2D6764B4B6148231E72 /* Pods-AiBC.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AiBC.release.xcconfig"; path = "Target Support Files/Pods-AiBC/Pods-AiBC.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -139,8 +143,7 @@
 				74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */,
 				74972D94250BA17C00598B86 /* WebViewController.swift */,
 				7429ACA52519FD4700341657 /* ItemsStockViewController.swift */,
-				74D018F42509A0B2004DC3C7 /* ItemsViewControllerCell */,
-				74972D8F250B9D7400598B86 /* ItemsViewControllerIndicatorCell */,
+				74DD6E49252187EE00010FF3 /* Cell */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -185,6 +188,25 @@
 				74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */,
 			);
 			path = ItemsViewControllerCell;
+			sourceTree = "<group>";
+		};
+		74DD6E49252187EE00010FF3 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				74D018F42509A0B2004DC3C7 /* ItemsViewControllerCell */,
+				74972D8F250B9D7400598B86 /* ItemsViewControllerIndicatorCell */,
+				74DD6E4A2521880100010FF3 /* ItemsStockViewControllerCell */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		74DD6E4A2521880100010FF3 /* ItemsStockViewControllerCell */ = {
+			isa = PBXGroup;
+			children = (
+				74DD6E4B2521886D00010FF3 /* ItemsStockViewControllerCell.swift */,
+				74DD6E4C2521886D00010FF3 /* ItemsStockViewControllerCell.xib */,
+			);
+			path = ItemsStockViewControllerCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,6 +271,7 @@
 			files = (
 				74B9B9872507B8AB0037D96F /* LaunchScreen.storyboard in Resources */,
 				74D018F82509A164004DC3C7 /* ItemsViewControllerCell.xib in Resources */,
+				74DD6E4E2521886D00010FF3 /* ItemsStockViewControllerCell.xib in Resources */,
 				74B9B98F2507BEB00037D96F /* GoogleService-Info.plist in Resources */,
 				74B9B9842507B8AB0037D96F /* Assets.xcassets in Resources */,
 				74B9B9822507B8AA0037D96F /* Main.storyboard in Resources */,
@@ -320,6 +343,7 @@
 				74972D92250B9DD300598B86 /* ItemsViewControllerIndicatorCell.swift in Sources */,
 				74B9B97D2507B8AA0037D96F /* SceneDelegate.swift in Sources */,
 				74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */,
+				74DD6E4D2521886D00010FF3 /* ItemsStockViewControllerCell.swift in Sources */,
 				74972D8E250B97BF00598B86 /* QiitaTags.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
