@@ -19,8 +19,6 @@ final class BookmarkModel {
     
     var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
     let db = Firestore.firestore()
-    var likesCountArray: [String] = []
-    var commentsCountArray: [String] = []
     
     func bookmarkAction(title: String, profileImageURL: String, body: String, tags: String, url: String) {
         self.articleData.titleArray.append(title)
