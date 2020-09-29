@@ -71,9 +71,9 @@ final class BookmarkModel {
                 guard let urlData = document.data(), let url = Urls(data: urlData) else { return }
                 self.commentsCountArray.append(contentsOf: url.articleUrl)
                 print("success fetch DB data: \(document)")
-                } else {
-                    print("Document does not exist")
-                }
+            } else {
+                print("Document does not exist")
+            }
         }
     }
 }
