@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 
 protocol BookmarkModelDelegate: AnyObject {
-    func fetchBookmarkArticles(dataDescription: String)
+    func fetchBookmarkArticles(document: String)
 }
 
 final class BookmarkModel {
@@ -19,6 +19,8 @@ final class BookmarkModel {
     
     var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
     let db = Firestore.firestore()
+    var likesCountArray: [String] = []
+    var commentsCountArray: [String] = []
     
     func bookmarkAction(title: String, profileImageURL: String, body: String, tags: String, likesCount: Int, commentsCount: Int,url: String) {
         self.articleData.titleArray.append(title)
@@ -56,8 +58,19 @@ final class BookmarkModel {
         let docRef = db.collection("users").document("bookmark_articles")
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
-                let dataDescription = document.data()?.values
-                print("Document data: \(dataDescription!)")
+                guard let titleData = document.data(), let title = Titles(data: titleData) else { return }
+                self.articleData.titleArray.append(contentsOf: title.articleTitles)
+                guard let bodyData = document.data(), let body = Bodys(data: bodyData) else { return }
+                self.articleData.bodyArray.append(contentsOf: body.articleBodys)
+                guard let tagsData = document.data(), let tags = Tags(data: tagsData) else { return }
+                self.articleData.tagsArray.append(contentsOf: tags.articleTags)
+                guard let likesData = document.data(), let likes = LikesCount(data: likesData) else { return }
+                self.likesCountArray.append(contentsOf: likes.likesCount)
+                guard let commentsData = document.data(), let comments = CommentsCount(data: commentsData) else { return }
+                self.commentsCountArray.append(contentsOf: comments.commentsCount)
+                guard let urlData = document.data(), let url = Urls(data: urlData) else { return }
+                self.commentsCountArray.append(contentsOf: url.articleUrl)
+                print("success fetch DB data: \(document)")
                 } else {
                     print("Document does not exist")
                 }

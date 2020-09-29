@@ -11,7 +11,7 @@ import UIKit
 class ItemsStockViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private var dataSource: [ItemsViewControllerCellType] = []
+    private var dataSource: [String] = []
     var fetchArticleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
     private let itemsStockModel = BookmarkModel()
   
@@ -19,14 +19,13 @@ class ItemsStockViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         itemsStockModel.delegate = self
-//        itemsStockModel.fetchBookmarkArticles()
+        itemsStockModel.fetchBookmarkArticles()
     }
 }
 
 extension ItemsStockViewController: BookmarkModelDelegate {
-    func fetchBookmarkArticles(fetchData: [QiitaItems]) {
-        let dataSource = fetchData.map { ItemsViewControllerCellType.item(with: $0) }
-        self.dataSource = dataSource
+    func fetchBookmarkArticles(document: String) {
+        dataSource.append(document)
         tableView.reloadData()
     }
 }
@@ -35,7 +34,7 @@ extension ItemsStockViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(ItemsViewControllerCell.nib, forCellReuseIdentifier: ItemsViewControllerCell.reuseIdentifier)
+        tableView.register(ItemsStockViewControllerCell.nib, forCellReuseIdentifier: ItemsStockViewControllerCell.reuseIdentifier)
     }
 }
 
@@ -45,41 +44,14 @@ extension ItemsStockViewController: UITableViewDataSource {
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellType = dataSource[indexPath.row]
-      
-        switch cellType {
-        case .item(let item):
-            let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerCell
-          
-            cell.configureCell(
-                profileImageURL: item.user.profileImageURL,
-                title: item.title,
-                body: item.body,
-                tags: item.tags.reduce("") { $0 + "#\($1.name) " },
-                bookmarkCount: item.likesCount,
-                commentsCount: item.commentsCount,
-                url: item.url)
+            let cell = tableView.dequeueReusableCell(withIdentifier: ItemsStockViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsStockViewControllerCell
             return cell
-        default:
-          break
-        }
-      return UITableViewCell()
     }
 }
 
 extension ItemsStockViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cellType = dataSource[indexPath.row]
-        
-            switch cellType {
-            case .item(let item):
-                fetchArticleData.title = item.title
-                fetchArticleData.profileImageURL = item.user.profileImageURL
-                fetchArticleData.url = item.url
-                self.performSegue(withIdentifier: "WebViewController", sender: nil)
-            default:
-                break
-            }
+        let cell = dataSource[indexPath.row]
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
