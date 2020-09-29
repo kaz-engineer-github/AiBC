@@ -17,9 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="669-LN-G7g">
-                                <rect key="frame" x="0.0" y="539" width="375" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="669-LN-G7g">
+                                <rect key="frame" x="0.0" y="621" width="375" height="46"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
@@ -29,6 +28,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="669-LN-G7g" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Vw-qx-LLV"/>
+                            <constraint firstItem="669-LN-G7g" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="N7p-ON-bhu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="669-LN-G7g" secondAttribute="bottom" id="s8R-DX-0cM"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="HI5-Gk-yfA"/>
                     <connections>
