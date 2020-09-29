@@ -17,10 +17,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="469" height="222"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="QU2-bc-qa4" userLabel="Entire Stack View">
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="0" translatesAutoresizingMaskIntoConstraints="NO" id="QU2-bc-qa4" userLabel="Entire Stack View">
                         <rect key="frame" x="30" y="30" width="409" height="162"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="304" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-bd-qMn" userLabel="Title Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="0" translatesAutoresizingMaskIntoConstraints="NO" id="Dwj-bd-qMn" userLabel="Title Stack View">
                                 <rect key="frame" x="0.0" y="0.0" width="409" height="78"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqs-BX-Mn5">
@@ -50,7 +50,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-C9-zfQ" userLabel="Footer Stack View">
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="0" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-C9-zfQ" userLabel="Footer Stack View">
                                 <rect key="frame" x="0.0" y="142" width="285.5" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-9y-ONX">
@@ -85,10 +85,10 @@
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="QU2-bc-qa4" secondAttribute="trailing" constant="30" id="BfB-l1-hKK"/>
-                    <constraint firstAttribute="bottom" secondItem="QU2-bc-qa4" secondAttribute="bottom" constant="30" id="WxT-Sk-up1"/>
-                    <constraint firstItem="QU2-bc-qa4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="dsG-Z3-UzB"/>
-                    <constraint firstItem="QU2-bc-qa4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="m0q-9F-sMR"/>
+                    <constraint firstAttribute="trailing" secondItem="QU2-bc-qa4" secondAttribute="trailing" constant="30" id="5lL-pz-tFG"/>
+                    <constraint firstItem="QU2-bc-qa4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="30" id="BVt-5v-sm4"/>
+                    <constraint firstAttribute="bottom" secondItem="QU2-bc-qa4" secondAttribute="bottom" constant="30" id="UaF-Zi-0o4"/>
+                    <constraint firstItem="QU2-bc-qa4" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="30" id="ceE-0L-TEY"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
