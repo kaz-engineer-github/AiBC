@@ -42,13 +42,13 @@ final class BookmarkModel {
         ]) { (error) in
                if error != nil {
                    bookmarkRef.setData([
-                    "title": self.articleData.titleArray,
-                    "profileImage": self.articleData.profileImageURLArray,
-                    "body": self.articleData.bodyArray,
-                    "tags": self.articleData.tagsArray,
-                    "likesCount": self.articleData.likesCountArray,
-                    "commentsCount": self.articleData.commentsCountArray,
-                    "url": self.articleData.urlArray
+                       "title": self.articleData.titleArray,
+                       "profileImage": self.articleData.profileImageURLArray,
+                       "body": self.articleData.bodyArray,
+                       "tags": self.articleData.tagsArray,
+                       "likesCount": self.articleData.likesCountArray,
+                       "commentsCount": self.articleData.commentsCountArray,
+                       "url": self.articleData.urlArray
                    ], merge: true)
                }
            }
