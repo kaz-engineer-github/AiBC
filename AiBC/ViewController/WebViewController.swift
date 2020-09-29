@@ -27,9 +27,7 @@ class WebViewController: UIViewController {
         guard let bookmarkProfileImageURL = articleData.profileImageURL else { return }
         let bookmarkBody = articleData.body
         let bookmarkTags = articleData.tags
-        let bookmarkLikesCount:Int = articleData.likesCount
-        let bookmarkCommentsCount:Int = articleData.commentsCount
         let bookmarkURL = articleData.url
-        bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, likesCount: bookmarkLikesCount, commentsCount: bookmarkCommentsCount,url: bookmarkURL)
+        bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
     }
 }
