@@ -10,7 +10,7 @@ import Foundation
 import FirebaseFirestore
 
 protocol BookmarkModelDelegate: AnyObject {
-    func fetchBookmarkArticles(document: String)
+    func fetchBookmarkArticles(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String])
 }
 
 final class BookmarkModel {
@@ -48,17 +48,19 @@ final class BookmarkModel {
     
     func fetchBookmarkArticles() {
         let docRef = db.collection("users").document("bookmark_articles")
-        docRef.getDocument { (document, error) in
+        docRef.getDocument { [self] (document, error) in
             if let document = document, document.exists {
                 guard let titleData = document.data(), let title = Titles(data: titleData) else { return }
                 self.articleData.titleArray.append(contentsOf: title.articleTitles)
                 guard let bodyData = document.data(), let body = Bodys(data: bodyData) else { return }
                 self.articleData.bodyArray.append(contentsOf: body.articleBodys)
+                guard let profileImageUrlData = document.data(), let profileImageUrl = ProfileImageUrls(data: profileImageUrlData) else { return }
+                self.articleData.profileImageURLArray.append(contentsOf: profileImageUrl.profileImageUrl)
                 guard let tagsData = document.data(), let tags = Tags(data: tagsData) else { return }
                 self.articleData.tagsArray.append(contentsOf: tags.articleTags)
                 guard let urlData = document.data(), let url = Urls(data: urlData) else { return }
                 self.articleData.urlArray.append(contentsOf: url.articleUrl)
-                print("success fetch DB data: \(document)")
+                self.delegate?.fetchBookmarkArticles(title: articleData.titleArray,profileImageURL: articleData.profileImageURLArray, body: articleData.bodyArray, tags: articleData.tagsArray, url: articleData.urlArray)
             } else {
                 print("Document does not exist")
             }

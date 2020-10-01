@@ -7,9 +7,14 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ItemsStockViewControllerCell: UITableViewCell {
-
+  
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var profileIconImage: UIImageView!
+    @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
     static let reuseIdentifier: String = "ItemsStockViewControllerCell"
     static let nib: UINib = UINib(nibName: "ItemsStockViewControllerCell", bundle: nil)
   
@@ -20,5 +25,4 @@ class ItemsStockViewControllerCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
 }

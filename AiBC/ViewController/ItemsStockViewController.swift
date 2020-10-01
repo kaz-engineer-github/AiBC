@@ -7,11 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ItemsStockViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    private var dataSource: [String] = []
     var fetchArticleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
     private let itemsStockModel = BookmarkModel()
   
@@ -24,8 +24,12 @@ class ItemsStockViewController: UIViewController {
 }
 
 extension ItemsStockViewController: BookmarkModelDelegate {
-    func fetchBookmarkArticles(document: String) {
-        dataSource.append(document)
+    func fetchBookmarkArticles(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String]) {
+        fetchArticleData.titleArray.append(contentsOf: title)
+        fetchArticleData.profileImageURLArray.append(contentsOf: profileImageURL)
+        fetchArticleData.bodyArray.append(contentsOf: body)
+        fetchArticleData.tagsArray.append(contentsOf: tags)
+        fetchArticleData.urlArray.append(contentsOf: url)
         tableView.reloadData()
     }
 }
@@ -40,26 +44,29 @@ extension ItemsStockViewController {
 
 extension ItemsStockViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dataSource.count
+        return fetchArticleData.titleArray.count
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: ItemsStockViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsStockViewControllerCell
+            cell.titleLabel.text = fetchArticleData.titleArray[indexPath.row]
+            cell.bodyLabel.text = fetchArticleData.bodyArray[indexPath.row]
+            cell.tagsLabel.text = fetchArticleData.tagsArray[indexPath.row]
+            let url = URL(string: fetchArticleData.profileImageURLArray[indexPath.row])
+              cell.profileIconImage.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.3))])
             return cell
     }
 }
 
 extension ItemsStockViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = dataSource[indexPath.row]
+        fetchArticleData.url = fetchArticleData.urlArray[indexPath.row]
+        self.performSegue(withIdentifier: "WebViewController", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WebViewController" {
             let webVC: WebViewController = (segue.destination as? WebViewController)!
-            guard let imageURL =  fetchArticleData.profileImageURL else { return }
-            webVC.articleData.title = fetchArticleData.title
-            webVC.articleData.profileImageURL = imageURL
             webVC.articleData.url = fetchArticleData.url
         }
     }

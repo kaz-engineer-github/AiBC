@@ -53,28 +53,6 @@ extension Tags {
     }
 }
 
-struct LikesCount {
-    let likesCount: [String]
-}
-
-extension LikesCount {
-    init?(data: [String: Any]) {
-        guard let likesCountData = data["likesCount"] as? [String] else { return nil }
-        self.init(likesCount: likesCountData)
-    }
-}
-
-struct CommentsCount {
-    let commentsCount: [String]
-}
-
-extension CommentsCount {
-    init?(data: [String: Any]) {
-        guard let commentsCountData = data["commentsCount"] as? [String] else { return nil }
-        self.init(commentsCount: commentsCountData)
-    }
-}
-
 struct Urls {
     let articleUrl: [String]
 }
