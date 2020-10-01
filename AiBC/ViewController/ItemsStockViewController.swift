@@ -48,13 +48,13 @@ extension ItemsStockViewController: UITableViewDataSource {
     }
   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            let cell = tableView.dequeueReusableCell(withIdentifier: ItemsStockViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsStockViewControllerCell
-            cell.titleLabel.text = fetchArticleData.titleArray[indexPath.row]
-            cell.bodyLabel.text = fetchArticleData.bodyArray[indexPath.row]
-            cell.tagsLabel.text = fetchArticleData.tagsArray[indexPath.row]
-            let url = URL(string: fetchArticleData.profileImageURLArray[indexPath.row])
-              cell.profileIconImage.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.3))])
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: ItemsStockViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsStockViewControllerCell
+        cell.titleLabel.text = fetchArticleData.titleArray[indexPath.row]
+        cell.bodyLabel.text = fetchArticleData.bodyArray[indexPath.row]
+        cell.tagsLabel.text = fetchArticleData.tagsArray[indexPath.row]
+        let url = URL(string: fetchArticleData.profileImageURLArray[indexPath.row])
+        cell.profileIconImage.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.3))])
+        return cell
     }
 }
 

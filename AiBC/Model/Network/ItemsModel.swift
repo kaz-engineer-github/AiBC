@@ -26,7 +26,6 @@ final class ItemsModel {
                     do {
                         guard let data = response.data else { return }
                         let qiitaItems = try JSONDecoder().decode([QiitaItems].self, from: data)
-                        print(qiitaItems)
                         self.delegate?.getQiitaData(qiitaItems: qiitaItems)
                     } catch {
                         // デコードのエラー
