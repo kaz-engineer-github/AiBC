@@ -24,19 +24,25 @@ class ItemsViewController: UIViewController {
 }
 
 extension ItemsViewController: ItemsModelDelegate {
-    func getQiitaData(qiitaItems: [QiitaItems]) {
-        let dataSource = qiitaItems.map { ItemsViewControllerCellType.item(with: $0) }
-        self.dataSource = dataSource
+    func onSuccess(with items: [QiitaItems], isReachLastPage: Bool) {
+        dataSource = items.map { .item(with: $0) } + (isReachLastPage ? [] : [.indicator])
         tableView.reloadData()
+    }
+  
+    func onError(with error: Error) {
+        let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(ac, animated: true, completion: nil)
     }
 }
 
 extension ItemsViewController {
     private func configureTableView() {
-    tableView.delegate = self
-    tableView.dataSource = self
-    tableView.register(ItemsViewControllerCell.nib, forCellReuseIdentifier: ItemsViewControllerCell.reuseIdentifier)
-  }
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(ItemsViewControllerCell.nib, forCellReuseIdentifier: ItemsViewControllerCell.reuseIdentifier)
+        tableView.register(ItemsViewControllerIndicatorCell.nib, forCellReuseIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier)
+    }
 }
 
 extension ItemsViewController: UITableViewDataSource {
@@ -69,6 +75,13 @@ extension ItemsViewController: UITableViewDataSource {
 }
 
 extension ItemsViewController: UITableViewDelegate {
+  
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y + tableView.frame.size.height > tableView.contentSize.height - 24 && tableView.isDragging {
+            itemsModel.onReachBottom()
+        }
+    }
+  
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellType = dataSource[indexPath.row]
         
