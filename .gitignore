@@ -3,3 +3,6 @@
 
 # setting
 xcuserdata/
+
+# Access Token
+Secrets.swift
