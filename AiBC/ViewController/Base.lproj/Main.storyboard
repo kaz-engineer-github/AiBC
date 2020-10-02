@@ -99,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVH-r5-W3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830" y="-614"/>
+            <point key="canvasLocation" x="2829.5999999999999" y="-614.84257871064472"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="p7L-Xw-F1p">
@@ -201,7 +201,15 @@
         <scene sceneID="dpe-Ft-vhb">
             <objects>
                 <tabBarController id="FWA-VZ-S9k" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="r9y-NV-1IH"/>
+                    <navigationItem key="navigationItem" id="r9y-NV-1IH">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="ROu-c2-i33">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="N0h-yl-BfZ">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Log out"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="sJj-0Y-EI0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
