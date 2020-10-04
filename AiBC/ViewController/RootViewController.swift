@@ -7,24 +7,23 @@
 //
 
 import UIKit
+import Lottie
 
 class RootViewController: UIViewController {
-
+  
+    private let lottieAnimation = "1"
+    private let animationView = AnimationView()
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        let animation = Animation.named(lottieAnimation)
+        animationView.frame = CGRect(x: 0, y: 0, width: view.bounds.width, height: view.bounds.height)
+        animationView.animation = animation
+        animationView.contentMode = .scaleAspectFit
+        animationView.animationSpeed = 1.0
+        view.addSubview(animationView)
+        animationView.play { finished in
+            self.performSegue(withIdentifier: "tabBarController", sender: nil)
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
