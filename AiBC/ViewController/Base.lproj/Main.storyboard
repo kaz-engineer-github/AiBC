@@ -171,14 +171,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Xl-JY-H3T">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Xl-JY-H3T">
                                 <rect key="frame" x="0.0" y="44" width="375" height="623"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="FnG-FF-27z"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9Xl-JY-H3T" firstAttribute="trailing" secondItem="FnG-FF-27z" secondAttribute="trailing" id="Gbd-Re-sFZ"/>
+                            <constraint firstItem="9Xl-JY-H3T" firstAttribute="top" secondItem="FnG-FF-27z" secondAttribute="top" id="UkX-as-hMH"/>
+                            <constraint firstItem="9Xl-JY-H3T" firstAttribute="leading" secondItem="FnG-FF-27z" secondAttribute="leading" id="bwO-V9-lp0"/>
+                            <constraint firstItem="9Xl-JY-H3T" firstAttribute="bottom" secondItem="FnG-FF-27z" secondAttribute="bottom" id="gtL-JX-eQs"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="gFV-jG-xFN"/>
                     <connections>
