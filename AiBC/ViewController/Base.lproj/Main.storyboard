@@ -12,18 +12,49 @@
         <!--SEARCH-->
         <scene sceneID="a6L-DJ-wgm">
             <objects>
-                <viewController id="PiD-fu-9Op" customClass="SearchViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="PiD-fu-9Op" customClass="ItemsSearchViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DLk-Xx-vQt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JOq-x4-MJY">
+                                <rect key="frame" x="0.0" y="44" width="375" height="574"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="1Lf-bG-Ff6">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="O0X-GY-m1N">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O0X-GY-m1N" id="XrZ-JK-kfV">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="db2-z0-gLb"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JOq-x4-MJY" firstAttribute="leading" secondItem="db2-z0-gLb" secondAttribute="leading" id="2Nc-Ui-PQr"/>
+                            <constraint firstItem="JOq-x4-MJY" firstAttribute="bottom" secondItem="db2-z0-gLb" secondAttribute="bottom" id="Rz4-lz-Gac"/>
+                            <constraint firstItem="JOq-x4-MJY" firstAttribute="top" secondItem="db2-z0-gLb" secondAttribute="top" id="TsL-Sw-lhn"/>
+                            <constraint firstItem="JOq-x4-MJY" firstAttribute="trailing" secondItem="db2-z0-gLb" secondAttribute="trailing" id="wKC-ii-8Fz"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="SEARCH" image="magnifyingglass" catalog="system" id="oXg-Pg-mIf"/>
+                    <connections>
+                        <outlet property="searchBar" destination="1Lf-bG-Ff6" id="f1b-aQ-SRx"/>
+                        <outlet property="tableView" destination="JOq-x4-MJY" id="vai-z9-rSD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQc-WD-VsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4012" y="664"/>
+            <point key="canvasLocation" x="4012" y="663.41829085457277"/>
         </scene>
         <!--HOME-->
         <scene sceneID="1nx-wA-rFK">
