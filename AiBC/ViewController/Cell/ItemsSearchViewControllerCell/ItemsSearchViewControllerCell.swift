@@ -9,6 +9,12 @@
 import UIKit
 
 class ItemsSearchViewControllerCell: UITableViewCell {
+  
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var profileIconImage: UIImageView!
+    static let reuseIdentifier: String = "ItemsViewControllerCell"
+    static let nib: UINib = UINib(nibName: "ItemsViewControllerCell", bundle: nil)
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
