@@ -11,8 +11,7 @@ import Alamofire
 
 protocol QiitaAPIClientProtocol {
     func getItems(page: Int, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void)
-//    func getSearchItems(page: Int, text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void)
-    func getSearchItems(text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void)
+    func getSearchItems(page: Int, text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void)
 }
 
 final class QiitaAPIClient: QiitaAPIClientProtocol {
@@ -45,8 +44,8 @@ final class QiitaAPIClient: QiitaAPIClientProtocol {
   
 //    func getSearchItems(page: Int, text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void) {
 //        let url = baseURL + "?/items?page=\(page)&query=tag%3A" + text
-    func getSearchItems(text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void) {
-        let url = baseURL + "/items?page=1&query=tag%3A" + text
+    func getSearchItems(page: Int, text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void) {
+        let url = baseURL + "/items?page=\(page)&query=tag%3A" + text
         let headers = HTTPHeaders([HTTPHeader(name: "Authorization", value: "Bearer " + qiitaAccessToken)])
         AF.request(url, method: .get, encoding: JSONEncoding.default, headers: headers).responseJSON { response in
             switch response.result {

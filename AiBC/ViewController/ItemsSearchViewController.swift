@@ -28,15 +28,13 @@ class ItemsSearchViewController: UIViewController {
 extension ItemsSearchViewController: UISearchBarDelegate {
   
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-          if let text = searchBar.text {
-              if text == "" {
-                  print("空だ")
-              } else {
+        if let text = searchBar.text {
+            if text == "" {
+                print("error")
+            } else {
                 itemsSearchModel.getSearchData(text: searchBar.text!)
-              }
-          }
-        print("呼ばれた1")
-      
+            }
+        }
         tableView.reloadData()
     }
   
@@ -48,8 +46,8 @@ extension ItemsSearchViewController: UISearchBarDelegate {
 
 extension ItemsSearchViewController: ItemsSearchModelDelegate {
   
-    func onSearchSuccess(with items: [QiitaItems]) {
-        dataSource = items.map { .item(with: $0) }
+    func onSearchSuccess(with items: [QiitaItems], isReachLastPage: Bool) {
+        dataSource = items.map { .item(with: $0) } + (isReachLastPage ? [] : [.indicator])
         tableView.reloadData()
     }
 
@@ -64,8 +62,8 @@ extension ItemsSearchViewController {
     private func configureTableView() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.register(ItemsViewControllerCell.nib, forCellReuseIdentifier: ItemsViewControllerCell.reuseIdentifier)
-//        tableView.register(ItemsViewControllerIndicatorCell.nib, forCellReuseIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier)
+        tableView.register(ItemsSearchViewControllerCell.nib, forCellReuseIdentifier: ItemsSearchViewControllerCell.reuseIdentifier)
+        tableView.register(ItemsViewControllerIndicatorCell.nib, forCellReuseIdentifier: ItemsViewControllerIndicatorCell.reuseIdentifier)
     }
 }
 
@@ -79,7 +77,7 @@ extension ItemsSearchViewController: UITableViewDataSource {
         
         switch cellType {
         case .item(let item):
-            let cell = tableView.dequeueReusableCell(withIdentifier: ItemsViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsViewControllerCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: ItemsSearchViewControllerCell.reuseIdentifier, for: indexPath) as! ItemsSearchViewControllerCell
             
             cell.configureCell(
                 profileImageURL: item.user.profileImageURL,
@@ -100,11 +98,11 @@ extension ItemsSearchViewController: UITableViewDataSource {
 
 extension ItemsSearchViewController: UITableViewDelegate {
   
-//    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-//        if tableView.contentOffset.y + tableView.frame.size.height > tableView.contentSize.height - 24 && tableView.isDragging {
-//            itemsSearchModel.onSearchReachBottom()
-//        }
-//    }
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if tableView.contentOffset.y + tableView.frame.size.height > tableView.contentSize.height - 24 && tableView.isDragging {
+            itemsSearchModel.onSearchReachBottom()
+        }
+    }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellType = dataSource[indexPath.row]
@@ -113,7 +111,6 @@ extension ItemsSearchViewController: UITableViewDelegate {
             case .item(let item):
                 articleData.title = item.title
                 articleData.profileImageURL = item.user.profileImageURL
-                articleData.body = item.body
                 articleData.tags = item.tags.reduce("") { $0 + "#\($1.name) " }
                 articleData.url = item.url
               
@@ -131,6 +128,7 @@ extension ItemsSearchViewController: UITableViewDelegate {
             webVC.articleData.profileImageURL = imageURL
             webVC.articleData.body = articleData.body
             webVC.articleData.tags = articleData.tags
+            webVC.articleData.url = articleData.url
             webVC.articleData.url = articleData.url
         }
     }
