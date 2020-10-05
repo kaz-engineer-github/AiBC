@@ -7,24 +7,31 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ItemsSearchViewControllerCell: UITableViewCell {
   
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileIconImage: UIImageView!
-    static let reuseIdentifier: String = "ItemsViewControllerCell"
-    static let nib: UINib = UINib(nibName: "ItemsViewControllerCell", bundle: nil)
+    @IBOutlet weak var tagsLabel: UILabel!
+    static let reuseIdentifier: String = "ItemsSearchViewControllerCell"
+    static let nib: UINib = UINib(nibName: "ItemsSearchViewControllerCell", bundle: nil)
     
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
+    func configureCell(profileImageURL: String?, title: String, body: String, tags: String, bookmarkCount: Int, commentsCount: Int, url:String) {
+        titleLabel.text = title
+        tagsLabel.text = tags
+        
+        if let url = URL(string: profileImageURL ?? "") {
+            profileIconImage.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.3))])
+        }
+    }
 }
