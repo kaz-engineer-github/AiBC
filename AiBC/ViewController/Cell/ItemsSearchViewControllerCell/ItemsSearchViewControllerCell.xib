@@ -13,7 +13,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="55" id="KGk-i7-Jjw" customClass="ItemsSearchViewControllerCell" customModule="AiBC" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="55"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -48,7 +48,6 @@
                 <constraints>
                     <constraint firstItem="719-CZ-7BF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="BbL-2T-Gnu"/>
                     <constraint firstItem="Cya-QK-dSe" firstAttribute="leading" secondItem="719-CZ-7BF" secondAttribute="trailing" constant="5" id="cg0-5j-SPv"/>
-                    <constraint firstAttribute="bottom" secondItem="Cya-QK-dSe" secondAttribute="bottom" constant="5" id="gaE-d5-c2D"/>
                     <constraint firstAttribute="trailing" secondItem="Cya-QK-dSe" secondAttribute="trailing" constant="5" id="gq2-dP-YWG"/>
                     <constraint firstItem="Cya-QK-dSe" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="kuS-Hz-DFw"/>
                     <constraint firstItem="719-CZ-7BF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="nnR-Wp-EBz"/>
