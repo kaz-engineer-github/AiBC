@@ -33,13 +33,10 @@ extension ItemsSearchViewController: UISearchBarDelegate {
                 print("error")
             } else {
                 itemsSearchModel.getSearchData(text: searchBar.text!)
+                self.searchBar.endEditing(true)
             }
         }
         tableView.reloadData()
-    }
-  
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        searchBar.resignFirstResponder()
     }
 }
 
