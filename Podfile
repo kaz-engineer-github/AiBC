@@ -12,4 +12,9 @@ target 'AiBC' do
   pod 'Kingfisher'
   pod 'Alamofire'
   pod 'lottie-ios'
+
+  target 'AiBCTests' do
+      inherit! :search_paths
+      pod 'Firebase'
+  end
 end
