@@ -20,7 +20,7 @@ class ItemsSearchViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         itemsSearchModel.delegate = self
-      searchBar.delegate = self
+        searchBar.delegate = self
     }
 
 }

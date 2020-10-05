@@ -35,7 +35,6 @@ final class ItemsSearchModel {
             switch result {
             case .success(let response):
                 self?.currentItems = response.items
-              print("検索できてる\(self?.currentItems)")
                 self?.delegate?.onSearchSuccess(with: response.items, isReachLastPage: false)
             case .failure(let error):
                 self?.delegate?.onSearchError(with: error)
