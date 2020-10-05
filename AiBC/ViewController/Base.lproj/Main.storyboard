@@ -50,6 +50,7 @@
                     <connections>
                         <outlet property="searchBar" destination="1Lf-bG-Ff6" id="f1b-aQ-SRx"/>
                         <outlet property="tableView" destination="JOq-x4-MJY" id="vai-z9-rSD"/>
+                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="RnB-Ep-cbM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQc-WD-VsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -265,7 +266,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dRb-s1-ZRb"/>
+        <segue reference="RnB-Ep-cbM"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
