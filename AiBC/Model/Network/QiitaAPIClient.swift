@@ -42,8 +42,6 @@ final class QiitaAPIClient: QiitaAPIClientProtocol {
         }
     }
   
-//    func getSearchItems(page: Int, text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void) {
-//        let url = baseURL + "?/items?page=\(page)&query=tag%3A" + text
     func getSearchItems(page: Int, text: String, completion: @escaping (Result<QiitaItemsResponse, Error>) -> Void) {
         let url = baseURL + "/items?page=\(page)&query=tag%3A" + text
         let headers = HTTPHeaders([HTTPHeader(name: "Authorization", value: "Bearer " + qiitaAccessToken)])

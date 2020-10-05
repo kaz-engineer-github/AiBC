@@ -51,11 +51,11 @@ extension ItemsSearchViewController: ItemsSearchModelDelegate {
         tableView.reloadData()
     }
 
-  func onSearchError(with error: Error) {
-      let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-      ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-      present(ac, animated: true, completion: nil)
-  }
+    func onSearchError(with error: Error) {
+        let ac = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(ac, animated: true, completion: nil)
+    }
 }
 
 extension ItemsSearchViewController {
@@ -132,5 +132,4 @@ extension ItemsSearchViewController: UITableViewDelegate {
             webVC.articleData.url = articleData.url
         }
     }
-  
 }

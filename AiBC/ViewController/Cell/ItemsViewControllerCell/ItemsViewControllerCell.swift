@@ -11,14 +11,14 @@ import Kingfisher
 
 class ItemsViewControllerCell: UITableViewCell {
 
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var profileIconImage: UIImageView!
-  @IBOutlet weak var bodyLabel: UILabel!
-  @IBOutlet weak var tagsLabel: UILabel!
-  @IBOutlet weak var bookmarkCountLabel: UILabel!
-  @IBOutlet weak var commentsCountLabel: UILabel!
-  static let reuseIdentifier: String = "ItemsViewControllerCell"
-  static let nib: UINib = UINib(nibName: "ItemsViewControllerCell", bundle: nil)
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var profileIconImage: UIImageView!
+    @IBOutlet weak var bodyLabel: UILabel!
+    @IBOutlet weak var tagsLabel: UILabel!
+    @IBOutlet weak var bookmarkCountLabel: UILabel!
+    @IBOutlet weak var commentsCountLabel: UILabel!
+    static let reuseIdentifier: String = "ItemsViewControllerCell"
+    static let nib: UINib = UINib(nibName: "ItemsViewControllerCell", bundle: nil)
   
   override func awakeFromNib() {
         super.awakeFromNib()
