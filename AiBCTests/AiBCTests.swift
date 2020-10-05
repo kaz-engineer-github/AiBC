@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import AiBC
 
 class AiBCTests: XCTestCase {
 
