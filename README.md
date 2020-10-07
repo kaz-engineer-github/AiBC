@@ -7,8 +7,8 @@ Qiita記事からAPI通信で記事を取得して閲覧するアプリです。
 
 | 一覧画面 | 検索画面 | 記事の保存画面 |
 | :-----: | :-----: | :-----: |
-| !
-[AiBC_getArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/fdd4d264-b78c-baa4-4456-f67a1f5da553.gif) | ![AiBC_searchArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/1ce27ce6-bc43-3d4f-7cf9-b9505429cf77.gif) | ![AiBC_stockArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/41a21bca-d860-44f3-dbf7-acdbcf8a59c2.gif) |
+| 
+![AiBC_getArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/fdd4d264-b78c-baa4-4456-f67a1f5da553.gif) | ![AiBC_searchArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/1ce27ce6-bc43-3d4f-7cf9-b9505429cf77.gif) | ![AiBC_stockArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/41a21bca-d860-44f3-dbf7-acdbcf8a59c2.gif) |
 
 ## 機能一覧
 
