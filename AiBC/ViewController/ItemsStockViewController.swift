@@ -19,6 +19,10 @@ class ItemsStockViewController: UIViewController {
         super.viewDidLoad()
         configureTableView()
         itemsStockModel.delegate = self
+    }
+  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         itemsStockModel.fetchBookmarkArticles()
     }
 }
