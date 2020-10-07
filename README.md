@@ -11,34 +11,42 @@ Qiita記事からAPI通信で記事を取得して閲覧するアプリです。
 ![AiBC_getArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/fdd4d264-b78c-baa4-4456-f67a1f5da553.gif) | ![AiBC_searchArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/1ce27ce6-bc43-3d4f-7cf9-b9505429cf77.gif) | ![AiBC_stockArticle.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/192876/41a21bca-d860-44f3-dbf7-acdbcf8a59c2.gif) |
 
 ## 機能一覧
-
-「大まかな機能」
+### 大まかな機能
 ・記事取得
 ・記事検索（タグ名で検索）
 ・記事をお気に入りし、保存する機能
 
-「その他」
+### その他機能
 ・ページネーション
 ・簡易的なAPIClient
 ・Cloudfirestoreを利用したデータの保存と取得
 
 ## 環境
 
-・Xcode 12.0.1
-・Swift 5.3
+*Xcode 12.0.1  
+*Swift 5.3  
 
 ## 導入したライブラリ
 ※cocoapodを利用してライブラリの管理を行なっております。
 
-・Firebase
-・Firebase/Firestore
-・Kingfisher
-・Alamofire
-・lottie-ios
+-Firebase
+-Firebase/Firestore
+-Kingfisher
+-Alamofire
+-lottie-ios
 
 ## 注意
 Cloudfirestoreを使用しております。GoogleService-Info.plistにセキュアな情報があると思ったので、GitHub上には載せておりません。
 
+## 事前の準備
+### アクセストークンの追加
+
+Qiita のアクセストークンが必要になります。  
+以下のコマンドを実行してアクセストークンをプロジェクトに追加してください。
+
+```
+make inject-token TOKEN=#YOUR_TOKEN#
+```
 
 
 ## 工夫したところ
