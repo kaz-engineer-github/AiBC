@@ -30,4 +30,12 @@ class WebViewController: UIViewController {
         let bookmarkURL = articleData.url
         bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
     }
+    
+    @IBAction func goPage(_ sender: Any) {
+        webView.goForward()
+    }
+    
+    @IBAction func backPage(_ sender: Any) {
+        webView.goBack()
+    }
 }
