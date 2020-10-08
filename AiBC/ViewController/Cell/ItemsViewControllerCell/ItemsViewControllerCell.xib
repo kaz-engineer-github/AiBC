@@ -45,31 +45,33 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-C9-zfQ" userLabel="Footer Stack View">
-                                <rect key="frame" x="0.0" y="195" width="255.5" height="20"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="DBN-C9-zfQ" userLabel="Footer Stack View">
+                                <rect key="frame" x="0.0" y="195" width="270.5" height="20"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bookmark.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="FDe-9y-ONX">
                                         <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                        <color key="tintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="OoN-X9-6Oq"/>
                                             <constraint firstAttribute="width" constant="20" id="xfq-cn-PeR"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bookmark Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Apx-ei-hse">
-                                        <rect key="frame" x="20" y="0.0" width="105.5" height="20"/>
+                                        <rect key="frame" x="25" y="0.0" width="105.5" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="message.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="kwI-Rj-zKC">
-                                        <rect key="frame" x="125.5" y="0.0" width="20" height="19.5"/>
+                                        <rect key="frame" x="135.5" y="0.0" width="20" height="19.5"/>
+                                        <color key="tintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="Ox9-3P-KZV"/>
                                             <constraint firstAttribute="width" constant="20" id="Wm1-QN-3IN"/>
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments Counter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAj-K2-rC5">
-                                        <rect key="frame" x="145.5" y="0.0" width="110" height="20"/>
+                                        <rect key="frame" x="160.5" y="0.0" width="110" height="20"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
