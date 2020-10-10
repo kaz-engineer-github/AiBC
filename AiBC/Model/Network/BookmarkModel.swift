@@ -66,4 +66,25 @@ final class BookmarkModel {
             }
         }
     }
+    
+    func trashBookmarkArticles(title: String, profileImageURL: String, body: String, tags: String, url: String) {
+        self.articleData.titleArray.append(title)
+        self.articleData.profileImageURLArray.append(profileImageURL)
+        self.articleData.bodyArray.append(body)
+        self.articleData.tagsArray.append(tags)
+        self.articleData.urlArray.append(url)
+        db.collection("users").document("bookmark_articles").updateData([
+            "title": FieldValue.arrayRemove(articleData.titleArray),
+            "profileImage": FieldValue.arrayRemove(articleData.profileImageURLArray),
+            "body": FieldValue.arrayRemove(articleData.bodyArray),
+            "tags": FieldValue.arrayRemove(articleData.tagsArray),
+            "url": FieldValue.arrayRemove(articleData.urlArray)
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+            }
+        }
+    }
 }

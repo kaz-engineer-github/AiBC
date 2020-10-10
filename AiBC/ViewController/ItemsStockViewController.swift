@@ -58,6 +58,7 @@ extension ItemsStockViewController: UITableViewDataSource {
         cell.tagsLabel.text = fetchArticleData.tagsArray[indexPath.row]
         let url = URL(string: fetchArticleData.profileImageURLArray[indexPath.row])
         cell.profileIconImage.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.3))])
+        cell.urlLabel.text = fetchArticleData.urlArray[indexPath.row]
         return cell
     }
 }
