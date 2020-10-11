@@ -34,6 +34,37 @@ extension ItemsStockViewController: BookmarkModelDelegate {
         fetchArticleData.bodyArray.append(contentsOf: body)
         fetchArticleData.tagsArray.append(contentsOf: tags)
         fetchArticleData.urlArray.append(contentsOf: url)
+      
+        var title = Set<String>()
+        var profileImageURL = Set<String>()
+        var body = Set<String>()
+        var tags = Set<String>()
+      
+        fetchArticleData.titleArray = fetchArticleData.titleArray.reduce(into: []) { tmp, element in
+            guard !title.contains(element) else { return }
+            title.insert(element)
+            tmp.append(element)
+        }
+        fetchArticleData.profileImageURLArray = fetchArticleData.profileImageURLArray.reduce(into: []) { tmp, element in
+              guard !profileImageURL.contains(element) else { return }
+              profileImageURL.insert(element)
+              tmp.append(element)
+        }
+        fetchArticleData.bodyArray = fetchArticleData.bodyArray.reduce(into: []) { tmp, element in
+            guard !body.contains(element) else { return }
+            body.insert(element)
+            tmp.append(element)
+        }
+        fetchArticleData.tagsArray = fetchArticleData.tagsArray.reduce(into: []) { tmp, element in
+            guard !tags.contains(element) else { return }
+            tags.insert(element)
+            tmp.append(element)
+        }
+        fetchArticleData.urlArray = fetchArticleData.urlArray.reduce(into: []) { tmp, element in
+            guard !tags.contains(element) else { return }
+            tags.insert(element)
+            tmp.append(element)
+        }
         tableView.reloadData()
     }
 }
@@ -58,7 +89,7 @@ extension ItemsStockViewController: UITableViewDataSource {
         cell.tagsLabel.text = fetchArticleData.tagsArray[indexPath.row]
         let url = URL(string: fetchArticleData.profileImageURLArray[indexPath.row])
         cell.profileIconImage.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.3))])
-        cell.urlLabel.text = fetchArticleData.urlArray[indexPath.row]
+//        cell.urlLabel.text = fetchArticleData.urlArray[indexPath.row]
         return cell
     }
 }
