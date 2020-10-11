@@ -23,7 +23,6 @@ final class ItemsSearchModel {
     private var isLoading: Bool = false
     private var isReachLastPage: Bool = false
     var searchBarText: String = ""
-    private let baseURL: String = "https://qiita.com/api/v2"
 
     init(apiClient: QiitaAPIClientProtocol = QiitaAPIClient.shared) {
         self.apiClient = apiClient
