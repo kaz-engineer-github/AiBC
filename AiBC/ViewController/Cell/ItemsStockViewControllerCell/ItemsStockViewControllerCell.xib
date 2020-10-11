@@ -59,16 +59,9 @@
                             <action selector="trashArticle:" destination="2dq-6C-Dh2" eventType="touchUpInside" id="oXS-jo-B6U"/>
                         </connections>
                     </button>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="urlLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Caw-ZF-dbE">
-                        <rect key="frame" x="435.5" y="146.5" width="28.5" height="8.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="MFy-Qt-O2w" firstAttribute="leading" secondItem="OYm-60-50U" secondAttribute="trailing" constant="5" id="1Dh-dR-mi8"/>
-                    <constraint firstAttribute="trailing" secondItem="Caw-ZF-dbE" secondAttribute="trailing" constant="5" id="1zE-Ow-q7x"/>
                     <constraint firstItem="MFy-Qt-O2w" firstAttribute="top" secondItem="Ths-0D-nI8" secondAttribute="top" constant="30" id="IKK-IZ-9Fn"/>
                     <constraint firstItem="OYm-60-50U" firstAttribute="top" secondItem="Ths-0D-nI8" secondAttribute="top" constant="30" id="M6a-qq-Cdl"/>
                     <constraint firstAttribute="trailing" secondItem="MFy-Qt-O2w" secondAttribute="trailing" constant="30" id="Nhv-oy-Ilg"/>
@@ -76,7 +69,6 @@
                     <constraint firstItem="OYm-60-50U" firstAttribute="leading" secondItem="Ths-0D-nI8" secondAttribute="leading" constant="30" id="Y47-UO-fwZ"/>
                     <constraint firstAttribute="bottom" secondItem="XTA-At-dwb" secondAttribute="bottom" constant="30" id="ZmU-X2-xjc"/>
                     <constraint firstAttribute="bottom" secondItem="OYm-60-50U" secondAttribute="bottom" constant="30" id="bly-Eu-QCK"/>
-                    <constraint firstAttribute="bottom" secondItem="Caw-ZF-dbE" secondAttribute="bottom" constant="5" id="wjs-dq-pdx"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="nwM-r1-KMS"/>
@@ -85,9 +77,8 @@
                 <outlet property="profileIconImage" destination="MFy-Qt-O2w" id="EBv-OT-UCM"/>
                 <outlet property="tagsLabel" destination="1sl-qt-Sb1" id="Xy5-Tl-YZ0"/>
                 <outlet property="titleLabel" destination="KL2-PO-8B9" id="sUy-eg-tRu"/>
-                <outlet property="urlLabel" destination="Caw-ZF-dbE" id="fMk-sd-VHx"/>
             </connections>
-            <point key="canvasLocation" x="-215.19999999999999" y="91.754122938530742"/>
+            <point key="canvasLocation" x="380" y="94"/>
         </tableViewCell>
     </objects>
     <resources>
