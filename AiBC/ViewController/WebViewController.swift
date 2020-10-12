@@ -13,7 +13,7 @@ class WebViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
     @IBOutlet weak var bookmarkButton: UIBarButtonItem!
-    let bookmark = BookmarkModel()
+    private let bookmark = BookmarkModel()
     var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
   
     override func viewDidLoad() {
@@ -33,11 +33,12 @@ class WebViewController: UIViewController {
             bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
             //ブクマのimage変更
             articleData.isLiked = true
-          print("ブクマされた")
+            print("ブクマされた")
         } else {
-            //DB削除機能を加える
+            bookmark.trashBookmarkArticles(title: articleData.title, profileImageURL: articleData.profileImageURL!, body: articleData.body, tags: articleData.tags, url: articleData.url)
             articleData.isLiked = false
-          print("ブクマ解除された")
+            //ブクマのimage変更
+            print("ブクマ解除された")
         }
     }
     
