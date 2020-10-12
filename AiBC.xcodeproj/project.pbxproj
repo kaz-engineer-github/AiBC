@@ -161,7 +161,7 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
-		748874862520444900BA23E5 /* data */ = {
+		748874862520444900BA23E5 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				7429ACA22518C48000341657 /* ArticleData.swift */,
@@ -170,14 +170,14 @@
 				74972D89250B977700598B86 /* QiitaItems.swift */,
 				74DD6E4625204A7900010FF3 /* DBConverter.swift */,
 			);
-			path = data;
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		74972D86250B968500598B86 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				748874852520443200BA23E5 /* Network */,
-				748874862520444900BA23E5 /* data */,
+				748874862520444900BA23E5 /* Entity */,
 			);
 			path = Model;
 			sourceTree = "<group>";
