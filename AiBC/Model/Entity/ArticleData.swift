@@ -16,6 +16,7 @@ struct ArticleData {
     var likesCount: Int
     var commentsCount: Int
     var url: String
+    var isLiked: Bool = false
   
     var titleArray: [String] = []
     var profileImageURLArray: [String] = []

@@ -12,6 +12,7 @@ import WebKit
 class WebViewController: UIViewController {
 
     @IBOutlet weak var webView: WKWebView!
+    @IBOutlet weak var bookmarkButton: UIBarButtonItem!
     let bookmark = BookmarkModel()
     var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
   
@@ -23,12 +24,21 @@ class WebViewController: UIViewController {
     }
     
     @IBAction func bookmarkPress(_ sender: Any) {
-        let bookmarkTitle = articleData.title
-        guard let bookmarkProfileImageURL = articleData.profileImageURL else { return }
-        let bookmarkBody = articleData.body
-        let bookmarkTags = articleData.tags
-        let bookmarkURL = articleData.url
-        bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
+        if articleData.isLiked == false {
+            let bookmarkTitle = articleData.title
+            guard let bookmarkProfileImageURL = articleData.profileImageURL else { return }
+            let bookmarkBody = articleData.body
+            let bookmarkTags = articleData.tags
+            let bookmarkURL = articleData.url
+            bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
+            //ブクマのimage変更
+            articleData.isLiked = true
+          print("ブクマされた")
+        } else {
+            //DB削除機能を加える
+            articleData.isLiked = false
+          print("ブクマ解除された")
+        }
     }
     
     @IBAction func goPage(_ sender: Any) {
