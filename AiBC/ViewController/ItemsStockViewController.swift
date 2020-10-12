@@ -89,13 +89,16 @@ extension ItemsStockViewController: UITableViewDataSource {
         cell.tagsLabel.text = fetchArticleData.tagsArray[indexPath.row]
         let url = URL(string: fetchArticleData.profileImageURLArray[indexPath.row])
         cell.profileIconImage.kf.setImage(with: url, placeholder: nil, options: [.transition(.fade(0.3))])
-//        cell.urlLabel.text = fetchArticleData.urlArray[indexPath.row]
         return cell
     }
 }
 
 extension ItemsStockViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        fetchArticleData.title = fetchArticleData.titleArray[indexPath.row]
+        fetchArticleData.profileImageURL = fetchArticleData.profileImageURLArray[indexPath.row]
+        fetchArticleData.body = fetchArticleData.bodyArray[indexPath.row]
+        fetchArticleData.tags = fetchArticleData.tagsArray[indexPath.row]
         fetchArticleData.url = fetchArticleData.urlArray[indexPath.row]
         self.performSegue(withIdentifier: "WebViewController", sender: nil)
     }
@@ -103,6 +106,11 @@ extension ItemsStockViewController: UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WebViewController" {
             let webVC: WebViewController = (segue.destination as? WebViewController)!
+            guard let imageURL =  fetchArticleData.profileImageURL else { return }
+            webVC.articleData.title = fetchArticleData.title
+            webVC.articleData.profileImageURL = imageURL
+            webVC.articleData.body = fetchArticleData.body
+            webVC.articleData.tags = fetchArticleData.tags
             webVC.articleData.url = fetchArticleData.url
         }
     }
