@@ -157,6 +157,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="vk2-ei-Q8G"/>
                     <connections>
+                        <outlet property="bookmarkButton" destination="fEL-1Q-zlN" id="xkj-zC-Q2z"/>
                         <outlet property="webView" destination="vfF-S6-5sD" id="dfA-cv-4u2"/>
                     </connections>
                 </viewController>
