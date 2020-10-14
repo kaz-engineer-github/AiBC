@@ -38,6 +38,8 @@
 		74D018F3250998E2004DC3C7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F2250998E2004DC3C7 /* ItemsViewController.swift */; };
 		74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */; };
 		74D018F82509A164004DC3C7 /* ItemsViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */; };
+		74D332982536927700ABCE14 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D332962536927700ABCE14 /* WebKit.framework */; };
+		74D332992536927700ABCE14 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D332972536927700ABCE14 /* WebKit.framework */; };
 		74DD6E4725204A7900010FF3 /* DBConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD6E4625204A7900010FF3 /* DBConverter.swift */; };
 		74DD6E4D2521886D00010FF3 /* ItemsStockViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD6E4B2521886D00010FF3 /* ItemsStockViewControllerCell.swift */; };
 		74DD6E4E2521886D00010FF3 /* ItemsStockViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74DD6E4C2521886D00010FF3 /* ItemsStockViewControllerCell.xib */; };
@@ -90,6 +92,8 @@
 		74D018F2250998E2004DC3C7 /* ItemsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
 		74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCell.swift; sourceTree = "<group>"; };
 		74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsViewControllerCell.xib; sourceTree = "<group>"; };
+		74D332962536927700ABCE14 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/PrivateFrameworks/WebKit.framework; sourceTree = SDKROOT; };
+		74D332972536927700ABCE14 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		74DD6E4625204A7900010FF3 /* DBConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBConverter.swift; sourceTree = "<group>"; };
 		74DD6E4B2521886D00010FF3 /* ItemsStockViewControllerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsStockViewControllerCell.swift; sourceTree = "<group>"; };
 		74DD6E4C2521886D00010FF3 /* ItemsStockViewControllerCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ItemsStockViewControllerCell.xib; sourceTree = "<group>"; };
@@ -113,7 +117,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74D332982536927700ABCE14 /* WebKit.framework in Frameworks */,
 				4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */,
+				74D332992536927700ABCE14 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +200,8 @@
 		749B9F8F2508A4D000FEC5FD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				74D332972536927700ABCE14 /* WebKit.framework */,
+				74D332962536927700ABCE14 /* WebKit.framework */,
 				1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */,
 				7FA1D9BB266945152EB7D596 /* Pods_AiBCTests.framework */,
 			);
@@ -717,6 +725,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazufumiyoshimoto.AiBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -741,6 +753,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.kazufumiyoshimoto.AiBC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
+				SYSTEM_FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks",
+				);
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
