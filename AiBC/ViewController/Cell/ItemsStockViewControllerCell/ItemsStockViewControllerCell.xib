@@ -47,27 +47,13 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XTA-At-dwb">
-                        <rect key="frame" x="394" y="100" width="30" height="30"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="30" id="LlL-2G-ajX"/>
-                            <constraint firstAttribute="height" constant="30" id="fCK-nU-CYb"/>
-                        </constraints>
-                        <color key="tintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" image="trash.fill" catalog="system"/>
-                        <connections>
-                            <action selector="trashArticle:" destination="2dq-6C-Dh2" eventType="touchUpInside" id="oXS-jo-B6U"/>
-                        </connections>
-                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="MFy-Qt-O2w" firstAttribute="leading" secondItem="OYm-60-50U" secondAttribute="trailing" constant="5" id="1Dh-dR-mi8"/>
                     <constraint firstItem="MFy-Qt-O2w" firstAttribute="top" secondItem="Ths-0D-nI8" secondAttribute="top" constant="30" id="IKK-IZ-9Fn"/>
                     <constraint firstItem="OYm-60-50U" firstAttribute="top" secondItem="Ths-0D-nI8" secondAttribute="top" constant="30" id="M6a-qq-Cdl"/>
                     <constraint firstAttribute="trailing" secondItem="MFy-Qt-O2w" secondAttribute="trailing" constant="30" id="Nhv-oy-Ilg"/>
-                    <constraint firstItem="XTA-At-dwb" firstAttribute="leading" secondItem="OYm-60-50U" secondAttribute="trailing" constant="20" id="OyU-Qd-z2d"/>
                     <constraint firstItem="OYm-60-50U" firstAttribute="leading" secondItem="Ths-0D-nI8" secondAttribute="leading" constant="30" id="Y47-UO-fwZ"/>
-                    <constraint firstAttribute="bottom" secondItem="XTA-At-dwb" secondAttribute="bottom" constant="30" id="ZmU-X2-xjc"/>
                     <constraint firstAttribute="bottom" secondItem="OYm-60-50U" secondAttribute="bottom" constant="30" id="bly-Eu-QCK"/>
                 </constraints>
             </tableViewCellContentView>
@@ -78,10 +64,7 @@
                 <outlet property="tagsLabel" destination="1sl-qt-Sb1" id="Xy5-Tl-YZ0"/>
                 <outlet property="titleLabel" destination="KL2-PO-8B9" id="sUy-eg-tRu"/>
             </connections>
-            <point key="canvasLocation" x="380" y="94"/>
+            <point key="canvasLocation" x="380" y="93.553223388305852"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="trash.fill" catalog="system" width="121" height="128"/>
-    </resources>
 </document>
