@@ -124,22 +124,13 @@
                                             <action selector="backPage:" destination="uq8-mx-Aa1" id="5X3-lY-4Dv"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="VNa-Jt-CGK"/>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bIi-4n-bcw"/>
                                     <barButtonItem title="&gt;" id="j63-S5-d6X">
                                         <color key="tintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="goPage:" destination="uq8-mx-Aa1" id="zzV-rM-wVV"/>
                                         </connections>
                                     </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="108-KX-jVU"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JSS-xD-pwN"/>
-                                    <barButtonItem image="bookmark" catalog="system" id="fEL-1Q-zlN">
-                                        <color key="tintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <connections>
-                                            <action selector="bookmarkPress:" destination="uq8-mx-Aa1" id="REu-Y7-LQ1"/>
-                                        </connections>
-                                    </barButtonItem>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="wb3-4T-MiN"/>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -157,7 +148,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="vk2-ei-Q8G"/>
                     <connections>
-                        <outlet property="bookmarkButton" destination="fEL-1Q-zlN" id="xkj-zC-Q2z"/>
                         <outlet property="webView" destination="vfF-S6-5sD" id="dfA-cv-4u2"/>
                     </connections>
                 </viewController>
