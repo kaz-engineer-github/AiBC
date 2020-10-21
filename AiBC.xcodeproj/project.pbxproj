@@ -20,6 +20,7 @@
 		746B8CEA252AC40100200D1E /* ItemsSearchViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B8CE8252AC40100200D1E /* ItemsSearchViewControllerCell.swift */; };
 		746B8CEB252AC40100200D1E /* ItemsSearchViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 746B8CE9252AC40100200D1E /* ItemsSearchViewControllerCell.xib */; };
 		746B8D27252B275400200D1E /* AiBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B8D26252B275400200D1E /* AiBCTests.swift */; };
+		748480A1253FD6AD00925362 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D332972536927700ABCE14 /* WebKit.framework */; };
 		748B3F2325183AB600F44B1F /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B3F2225183AB600F44B1F /* BookmarkModel.swift */; };
 		74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */; };
 		74972D88250B96A800598B86 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D87250B96A800598B86 /* ItemsModel.swift */; };
@@ -38,8 +39,6 @@
 		74D018F3250998E2004DC3C7 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F2250998E2004DC3C7 /* ItemsViewController.swift */; };
 		74D018F72509A164004DC3C7 /* ItemsViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D018F52509A164004DC3C7 /* ItemsViewControllerCell.swift */; };
 		74D018F82509A164004DC3C7 /* ItemsViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D018F62509A164004DC3C7 /* ItemsViewControllerCell.xib */; };
-		74D332982536927700ABCE14 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D332962536927700ABCE14 /* WebKit.framework */; };
-		74D332992536927700ABCE14 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D332972536927700ABCE14 /* WebKit.framework */; };
 		74DD6E4725204A7900010FF3 /* DBConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD6E4625204A7900010FF3 /* DBConverter.swift */; };
 		74DD6E4D2521886D00010FF3 /* ItemsStockViewControllerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD6E4B2521886D00010FF3 /* ItemsStockViewControllerCell.swift */; };
 		74DD6E4E2521886D00010FF3 /* ItemsStockViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74DD6E4C2521886D00010FF3 /* ItemsStockViewControllerCell.xib */; };
@@ -117,9 +116,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				74D332982536927700ABCE14 /* WebKit.framework in Frameworks */,
+				748480A1253FD6AD00925362 /* WebKit.framework in Frameworks */,
 				4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */,
-				74D332992536927700ABCE14 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
