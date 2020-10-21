@@ -12,6 +12,7 @@ target 'AiBC' do
   pod 'Kingfisher'
   pod 'Alamofire'
   pod 'lottie-ios'
+  pod 'FaveButton'
 
   target 'AiBCTests' do
       inherit! :search_paths
