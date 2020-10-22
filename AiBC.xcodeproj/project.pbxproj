@@ -139,6 +139,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		746B02B42541804E0072C51B /* DB */ = {
+			isa = PBXGroup;
+			children = (
+				748B3F2225183AB600F44B1F /* BookmarkModel.swift */,
+				746B02AA25411A410072C51B /* Dao.swift */,
+				746B02B025411A4E0072C51B /* Repository.swift */,
+			);
+			path = DB;
+			sourceTree = "<group>";
+		};
 		746B8CE7252AC3A600200D1E /* ItemsSearchViewControllerCell */ = {
 			isa = PBXGroup;
 			children = (
@@ -164,9 +174,7 @@
 				7439A3012526DBC20011AB51 /* QiitaItemsResponse.swift */,
 				74972D87250B96A800598B86 /* ItemsModel.swift */,
 				746B8CE325297B0000200D1E /* ItemsSearchModel.swift */,
-				748B3F2225183AB600F44B1F /* BookmarkModel.swift */,
-				746B02AA25411A410072C51B /* Dao.swift */,
-				746B02B025411A4E0072C51B /* Repository.swift */,
+				746B02B42541804E0072C51B /* DB */,
 			);
 			path = Network;
 			sourceTree = "<group>";

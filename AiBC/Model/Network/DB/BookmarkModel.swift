@@ -16,7 +16,6 @@ protocol BookmarkModelDelegate: AnyObject {
 final class BookmarkModel {
     
     weak var delegate: BookmarkModelDelegate?
-    
     var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
     let db = Firestore.firestore()
     
@@ -68,11 +67,11 @@ final class BookmarkModel {
     }
     
     func trashBookmarkArticles(title: String, profileImageURL: String, body: String, tags: String, url: String) {
-        self.articleData.titleArray.append(title)
-        self.articleData.profileImageURLArray.append(profileImageURL)
-        self.articleData.bodyArray.append(body)
-        self.articleData.tagsArray.append(tags)
-        self.articleData.urlArray.append(url)
+//        self.articleData.titleArray.append(title)
+//        self.articleData.profileImageURLArray.append(profileImageURL)
+//        self.articleData.bodyArray.append(body)
+//        self.articleData.tagsArray.append(tags)
+//        self.articleData.urlArray.append(url)
         db.collection("users").document("bookmark_articles").updateData([
             "title": FieldValue.arrayRemove(articleData.titleArray),
             "profileImage": FieldValue.arrayRemove(articleData.profileImageURLArray),
