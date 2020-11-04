@@ -6,4 +6,10 @@
 //  Copyright © 2020 吉本和史. All rights reserved.
 //
 
-import Foundation
+struct Constants {
+    static let appName = "⛅️AiBC"
+    static let itemsViewControllerCell = "ItemsViewControllerCell"
+    static let itemsSearchViewControllerCell = "ItemsSearchViewControllerCell"
+    static let itemsStockViewControllerCell = "itemsStockViewControllerCell"
+    static let itemsViewControllerIndicatorCell = "ItemsViewControllerIndicatorCell"
+}
