@@ -8,8 +8,4 @@
 
 struct Constants {
     static let appName = "⛅️AiBC"
-    static let itemsViewControllerCell = "ItemsViewControllerCell"
-    static let itemsSearchViewControllerCell = "ItemsSearchViewControllerCell"
-    static let itemsStockViewControllerCell = "itemsStockViewControllerCell"
-    static let itemsViewControllerIndicatorCell = "ItemsViewControllerIndicatorCell"
 }
