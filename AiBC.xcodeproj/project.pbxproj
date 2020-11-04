@@ -10,6 +10,7 @@
 		4A900A32A88281954320A318 /* Pods_AiBC.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */; };
 		7429ACA32518C48000341657 /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429ACA22518C48000341657 /* ArticleData.swift */; };
 		7429ACA62519FD4700341657 /* ItemsStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7429ACA52519FD4700341657 /* ItemsStockViewController.swift */; };
+		742D91322552820400EA8BCE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742D91312552820400EA8BCE /* Constants.swift */; };
 		7439A2FA2526CDFB0011AB51 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7439A2F92526CDFB0011AB51 /* Secrets.swift */; };
 		7439A2FD2526D4E60011AB51 /* QiitaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7439A2FC2526D4E60011AB51 /* QiitaAPIClient.swift */; };
 		7439A3022526DBC20011AB51 /* QiitaItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7439A3012526DBC20011AB51 /* QiitaItemsResponse.swift */; };
@@ -61,6 +62,7 @@
 		1040DA95F417BC4A5520F44D /* Pods_AiBC.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AiBC.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7429ACA22518C48000341657 /* ArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
 		7429ACA52519FD4700341657 /* ItemsStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsStockViewController.swift; sourceTree = "<group>"; };
+		742D91312552820400EA8BCE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7439A2F92526CDFB0011AB51 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		7439A2FC2526D4E60011AB51 /* QiitaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaAPIClient.swift; sourceTree = "<group>"; };
 		7439A3012526DBC20011AB51 /* QiitaItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsResponse.swift; sourceTree = "<group>"; };
@@ -260,6 +262,7 @@
 				74B9B9882507B8AB0037D96F /* Info.plist */,
 				74B9B98E2507BEB00037D96F /* GoogleService-Info.plist */,
 				7439A34F25285DE30011AB51 /* 1.json */,
+				742D91312552820400EA8BCE /* Constants.swift */,
 			);
 			path = AiBC;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				7439A2FD2526D4E60011AB51 /* QiitaAPIClient.swift in Sources */,
 				746B8CDF2529798900200D1E /* ItemsSearchViewController.swift in Sources */,
 				74972D8C250B97A500598B86 /* QiitaUser.swift in Sources */,
+				742D91322552820400EA8BCE /* Constants.swift in Sources */,
 				746B02B125411A4E0072C51B /* Repository.swift in Sources */,
 				7429ACA62519FD4700341657 /* ItemsStockViewController.swift in Sources */,
 				746B02AB25411A410072C51B /* Dao.swift in Sources */,
