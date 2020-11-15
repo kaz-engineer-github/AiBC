@@ -24,7 +24,6 @@
 		746B8CEB252AC40100200D1E /* ItemsSearchViewControllerCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 746B8CE9252AC40100200D1E /* ItemsSearchViewControllerCell.xib */; };
 		746B8D27252B275400200D1E /* AiBCTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B8D26252B275400200D1E /* AiBCTests.swift */; };
 		748480A1253FD6AD00925362 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74D332972536927700ABCE14 /* WebKit.framework */; };
-		748B3F2325183AB600F44B1F /* BookmarkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748B3F2225183AB600F44B1F /* BookmarkModel.swift */; };
 		74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */; };
 		74972D88250B96A800598B86 /* ItemsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D87250B96A800598B86 /* ItemsModel.swift */; };
 		74972D8A250B977700598B86 /* QiitaItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74972D89250B977700598B86 /* QiitaItems.swift */; };
@@ -77,7 +76,6 @@
 		746B8D24252B275400200D1E /* AiBCTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AiBCTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		746B8D26252B275400200D1E /* AiBCTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AiBCTests.swift; sourceTree = "<group>"; };
 		746B8D28252B275400200D1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		748B3F2225183AB600F44B1F /* BookmarkModel.swift */ = {isa = PBXFileReference; indentWidth = 4; lastKnownFileType = sourcecode.swift; path = BookmarkModel.swift; sourceTree = "<group>"; tabWidth = 4; };
 		74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsViewControllerCellType.swift; sourceTree = "<group>"; };
 		74972D87250B96A800598B86 /* ItemsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsModel.swift; sourceTree = "<group>"; };
 		74972D89250B977700598B86 /* QiitaItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItems.swift; sourceTree = "<group>"; };
@@ -166,7 +164,6 @@
 				7439A3012526DBC20011AB51 /* QiitaItemsResponse.swift */,
 				74972D87250B96A800598B86 /* ItemsModel.swift */,
 				746B8CE325297B0000200D1E /* ItemsSearchModel.swift */,
-				748B3F2225183AB600F44B1F /* BookmarkModel.swift */,
 				746B02AA25411A410072C51B /* Dao.swift */,
 				746B02B025411A4E0072C51B /* Repository.swift */,
 			);
@@ -498,7 +495,6 @@
 			files = (
 				7429ACA32518C48000341657 /* ArticleData.swift in Sources */,
 				7439A2FA2526CDFB0011AB51 /* Secrets.swift in Sources */,
-				748B3F2325183AB600F44B1F /* BookmarkModel.swift in Sources */,
 				74972D85250B95D700598B86 /* ItemsViewControllerCellType.swift in Sources */,
 				7439A2FD2526D4E60011AB51 /* QiitaAPIClient.swift in Sources */,
 				746B8CDF2529798900200D1E /* ItemsSearchViewController.swift in Sources */,
