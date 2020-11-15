@@ -7,9 +7,11 @@
 //
 
 struct Constants {
-    static let appName = "⛅️AiBC"
-    static let webViewSegue = "WebViewController"
-    static let tabBarSegue = "tabBarController"
+    
+    struct Segue {
+        static let webViewSegue = "WebViewController"
+        static let tabBarSegue = "tabBarController"
+    }
   
     struct Cell {
         static let itemsViewControllerCell = "ItemsViewControllerCell"
@@ -19,11 +21,12 @@ struct Constants {
     }
     
     struct FStore {
+        static let collectionName = "users"
+        static let documentName = "bookmark_articles"
         static let titleField = "title"
         static let profField = "profileImage"
         static let bodyField = "body"
         static let tagsField = "tags"
         static let urlField = "url"
-        static let dateField = "date"
     }
 }

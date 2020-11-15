@@ -23,7 +23,7 @@ class RootViewController: UIViewController {
         animationView.animationSpeed = 1.0
         view.addSubview(animationView)
         animationView.play { finished in
-            self.performSegue(withIdentifier: Constants.tabBarSegue, sender: nil)
+            self.performSegue(withIdentifier: Constants.Segue.tabBarSegue, sender: nil)
         }
     }
 }
