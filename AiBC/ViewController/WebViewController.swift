@@ -23,7 +23,7 @@ class WebViewController: UIViewController, FaveButtonDelegate {
 
     @IBOutlet weak var webView: WKWebView!
     private var bookmarkButton: FaveButton!
-    private let bookmark = BookmarkModel()
+    private let bookmark = Repository()
     var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
   
     override func viewDidLoad() {
@@ -50,15 +50,13 @@ class WebViewController: UIViewController, FaveButtonDelegate {
             let bookmarkBody = articleData.body
             let bookmarkTags = articleData.tags
             let bookmarkURL = articleData.url
-            bookmark.bookmarkAction(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
-            //ブクマのimage変更
+            bookmark.updateBookmarkArticles(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
             //ブクマされた状態を維持する
             articleData.isLiked = true
             print("ブクマされた")
         } else {
-            bookmark.trashBookmarkArticles(title: articleData.title, profileImageURL: articleData.profileImageURL!, body: articleData.body, tags: articleData.tags, url: articleData.url)
+//            bookmark.passTrashBookmarkArticles(title: articleData.title, profileImageURL: articleData.profileImageURL!, body: articleData.body, tags: articleData.tags, url: articleData.url)
             articleData.isLiked = false
-            //ブクマのimage変更
             print("ブクマ解除された")
         }
     }

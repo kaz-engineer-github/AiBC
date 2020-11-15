@@ -11,29 +11,31 @@ import Firebase
 
 final class Dao {
   
-    let db = Firestore.firestore()
-    
+    private let db = Firestore.firestore()
+  
     // MARK: - Access DB to preserve articles data
-    func bookmarkArticles(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String]) {
-        let bookmarkRef = db.collection("users").document("bookmark_articles")
+    //DBに直接アクセスして、記事データを更新(初期設定)する
+    func updateData(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String]) {
+        let bookmarkRef = db.collection(Constants.FStore.collectionName).document(Constants.FStore.documentName)
+        //データの更新
         bookmarkRef.updateData([
-            "title": FieldValue.arrayUnion(title),
-            "profileImage": FieldValue.arrayUnion(profileImageURL),
-            "body": FieldValue.arrayUnion(body),
-            "tags": FieldValue.arrayUnion(tags),
-            "url": FieldValue.arrayUnion(url)
+            //配列データに追加
+            Constants.FStore.titleField: FieldValue.arrayUnion(title),
+            Constants.FStore.profField: FieldValue.arrayUnion(profileImageURL),
+            Constants.FStore.bodyField: FieldValue.arrayUnion(body),
+            Constants.FStore.tagsField: FieldValue.arrayUnion(tags),
+            Constants.FStore.urlField: FieldValue.arrayUnion(url)
         ]) { (error) in
-            bookmarkRef.setData([
-                "title": title,
-                "profileImage": profileImageURL,
-                "body": body,
-                "tags": tags,
-                "url": url
-            ], merge: true) { (error) in
-                if error != nil {
-                    print("Error")
-                    return
-                }
+            if error != nil {
+                //初期データの追加
+                bookmarkRef.setData([
+                    Constants.FStore.titleField: title,
+                    Constants.FStore.profField: profileImageURL,
+                    Constants.FStore.bodyField: body,
+                    Constants.FStore.tagsField: tags,
+                    Constants.FStore.urlField: url
+                ], merge: true)
+                return
             }
         }
         print("success update DB")
@@ -41,29 +43,13 @@ final class Dao {
   
     // MARK: - Access DB to fetch articles data
 //    func fetchBookmarkArticles() {
-//        let docRef = db.collection("users").document("bookmark_articles")
-//        docRef.getDocument { (document, error) in
-//            if let document = document, document.exists {
-//                print("success fetch data")
-//            } else {
+//        let bookmarkRef = db.collection(Constants.FStore.collectionName).document(Constants.FStore.documentName)
+//        bookmarkRef.getDocument { (document, error) in
+//            if error != nil {
 //                print("Document does not exist")
-//            }
-//        }
-//    }
+//            } else if let document = document, document.exists {
 //
-//    // MARK: - Access DB to delete articles data
-//    func trashBookmarkArticles(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String]) {
-//        db.collection("users").document("bookmark_articles").updateData([
-//            "title": FieldValue.arrayRemove(title),
-//            "profileImage": FieldValue.arrayRemove(profileImageURL),
-//            "body": FieldValue.arrayRemove(body),
-//            "tags": FieldValue.arrayRemove(tags),
-//            "url": FieldValue.arrayRemove(url)
-//        ]) { err in
-//            if let err = err {
-//                print("Error updating document: \(err)")
-//            } else {
-//                print("Document successfully updated")
+//                print("success fetch data")
 //            }
 //        }
 //    }
