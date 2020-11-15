@@ -14,10 +14,8 @@ class ItemsStockViewControllerCell: UITableViewCell {
     @IBOutlet weak var profileIconImage: UIImageView!
     @IBOutlet weak var bodyLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
-    private let itemsStockModel = BookmarkModel()
-    static let reuseIdentifier: String = "ItemsStockViewControllerCell"
-    static let nib: UINib = UINib(nibName: "ItemsStockViewControllerCell", bundle: nil)
-    var articleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
+    static let reuseIdentifier: String = Constants.Cell.itemsStockViewControllerCell
+    static let nib: UINib = UINib(nibName: Constants.Cell.itemsStockViewControllerCell, bundle: nil)
   
     override func awakeFromNib() {
         super.awakeFromNib()

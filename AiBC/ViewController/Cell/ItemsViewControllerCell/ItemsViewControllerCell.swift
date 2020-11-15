@@ -17,8 +17,8 @@ class ItemsViewControllerCell: UITableViewCell {
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var bookmarkCountLabel: UILabel!
     @IBOutlet weak var commentsCountLabel: UILabel!
-    static let reuseIdentifier: String = "ItemsViewControllerCell"
-    static let nib: UINib = UINib(nibName: "ItemsViewControllerCell", bundle: nil)
+    static let reuseIdentifier: String = Constants.Cell.itemsViewControllerCell
+    static let nib: UINib = UINib(nibName: Constants.Cell.itemsViewControllerCell, bundle: nil)
   
   override func awakeFromNib() {
         super.awakeFromNib()

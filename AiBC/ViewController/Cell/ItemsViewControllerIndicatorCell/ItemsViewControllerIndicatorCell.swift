@@ -12,8 +12,8 @@ class ItemsViewControllerIndicatorCell: UITableViewCell {
 
     
     @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
-    static let reuseIdentifier: String = "ItemsViewControllerIndicatorCell"
-    static let nib: UINib = UINib(nibName: "ItemsViewControllerIndicatorCell", bundle: nil)
+    static let reuseIdentifier: String = Constants.Cell.itemsViewControllerIndicatorCell
+    static let nib: UINib = UINib(nibName: Constants.Cell.itemsViewControllerIndicatorCell, bundle: nil)
   
     override func awakeFromNib() {
         super.awakeFromNib()

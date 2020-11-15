@@ -14,8 +14,8 @@ class ItemsSearchViewControllerCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var profileIconImage: UIImageView!
     @IBOutlet weak var tagsLabel: UILabel!
-    static let reuseIdentifier: String = "ItemsSearchViewControllerCell"
-    static let nib: UINib = UINib(nibName: "ItemsSearchViewControllerCell", bundle: nil)
+    static let reuseIdentifier: String = Constants.Cell.itemsSearchViewControllerCell
+    static let nib: UINib = UINib(nibName: Constants.Cell.itemsSearchViewControllerCell, bundle: nil)
     
 
     override func awakeFromNib() {

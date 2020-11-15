@@ -93,14 +93,14 @@ extension ItemsViewController: UITableViewDelegate {
                 articleData.tags = item.tags.reduce("") { $0 + "#\($1.name) " }
                 articleData.url = item.url
               
-                self.performSegue(withIdentifier: "WebViewController", sender: nil)
+                self.performSegue(withIdentifier: Constants.webViewSegue, sender: nil)
             default:
                 break
             }
     }
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "WebViewController" {
+        if segue.identifier == Constants.webViewSegue {
             let webVC: WebViewController = (segue.destination as? WebViewController)!
             guard let imageURL =  articleData.profileImageURL else { return }
             webVC.articleData.title = articleData.title
