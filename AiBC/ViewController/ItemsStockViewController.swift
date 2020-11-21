@@ -13,61 +13,61 @@ class ItemsStockViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     var fetchArticleData = ArticleData(title: "", profileImageURL: "", body: "", tags: "", likesCount: 0, commentsCount: 0, url: "")
-//    private let itemsStockModel = Repository()
+    private let itemsStockModel = Repository()
   
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
-//        itemsStockModel.delegate = self
+        itemsStockModel.delegate = self
     }
   
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        itemsStockModel.passFetchBookmarkArticles()
+        itemsStockModel.fetchBookmarkArticles()
     }
 }
 
-//extension ItemsStockViewController {
-//    func passFetchBookmarkArticles(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String]) {
-//        fetchArticleData.titleArray.append(contentsOf: title)
-//        fetchArticleData.profileImageURLArray.append(contentsOf: profileImageURL)
-//        fetchArticleData.bodyArray.append(contentsOf: body)
-//        fetchArticleData.tagsArray.append(contentsOf: tags)
-//        fetchArticleData.urlArray.append(contentsOf: url)
-//
-//        var title = Set<String>()
-//        var profileImageURL = Set<String>()
-//        var body = Set<String>()
-//        var tags = Set<String>()
-//
-//        fetchArticleData.titleArray = fetchArticleData.titleArray.reduce(into: []) { tmp, element in
-//            guard !title.contains(element) else { return }
-//            title.insert(element)
-//            tmp.append(element)
-//        }
-//        fetchArticleData.profileImageURLArray = fetchArticleData.profileImageURLArray.reduce(into: []) { tmp, element in
-//              guard !profileImageURL.contains(element) else { return }
-//              profileImageURL.insert(element)
-//              tmp.append(element)
-//        }
-//        fetchArticleData.bodyArray = fetchArticleData.bodyArray.reduce(into: []) { tmp, element in
-//            guard !body.contains(element) else { return }
-//            body.insert(element)
-//            tmp.append(element)
-//        }
-//        fetchArticleData.tagsArray = fetchArticleData.tagsArray.reduce(into: []) { tmp, element in
-//            guard !tags.contains(element) else { return }
-//            tags.insert(element)
-//            tmp.append(element)
-//        }
-//        fetchArticleData.urlArray = fetchArticleData.urlArray.reduce(into: []) { tmp, element in
-//            guard !tags.contains(element) else { return }
-//            tags.insert(element)
-//            tmp.append(element)
-//        }
-//        tableView.reloadData()
-//    }
-//}
+extension ItemsStockViewController: RepositoryDelegate {
+    func fetchBookmarkArticles(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String]) {
+        fetchArticleData.titleArray.append(contentsOf: title)
+        fetchArticleData.profileImageURLArray.append(contentsOf: profileImageURL)
+        fetchArticleData.bodyArray.append(contentsOf: body)
+        fetchArticleData.tagsArray.append(contentsOf: tags)
+        fetchArticleData.urlArray.append(contentsOf: url)
+
+        var title = Set<String>()
+        var profileImageURL = Set<String>()
+        var body = Set<String>()
+        var tags = Set<String>()
+
+        fetchArticleData.titleArray = fetchArticleData.titleArray.reduce(into: []) { tmp, element in
+            guard !title.contains(element) else { return }
+            title.insert(element)
+            tmp.append(element)
+        }
+        fetchArticleData.profileImageURLArray = fetchArticleData.profileImageURLArray.reduce(into: []) { tmp, element in
+              guard !profileImageURL.contains(element) else { return }
+              profileImageURL.insert(element)
+              tmp.append(element)
+        }
+        fetchArticleData.bodyArray = fetchArticleData.bodyArray.reduce(into: []) { tmp, element in
+            guard !body.contains(element) else { return }
+            body.insert(element)
+            tmp.append(element)
+        }
+        fetchArticleData.tagsArray = fetchArticleData.tagsArray.reduce(into: []) { tmp, element in
+            guard !tags.contains(element) else { return }
+            tags.insert(element)
+            tmp.append(element)
+        }
+        fetchArticleData.urlArray = fetchArticleData.urlArray.reduce(into: []) { tmp, element in
+            guard !tags.contains(element) else { return }
+            tags.insert(element)
+            tmp.append(element)
+        }
+        tableView.reloadData()
+    }
+}
 
 extension ItemsStockViewController {
     private func configureTableView() {

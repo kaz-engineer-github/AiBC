@@ -50,16 +50,5 @@ final class Dao {
         }
     }
   
-    // MARK: - Access DB to fetch articles data
-//    func fetchBookmarkArticles() {
-//        let bookmarkRef = db.collection(Constants.FStore.collectionName).document(Constants.FStore.documentName)
-//        bookmarkRef.getDocument { (document, error) in
-//            if error != nil {
-//                print("Document does not exist")
-//            } else if let document = document, document.exists {
-//
-//                print("success fetch data")
-//            }
-//        }
-//    }
+
 }
