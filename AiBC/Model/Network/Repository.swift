@@ -50,16 +50,11 @@ final class Repository {
         }
     }
   
-//  func getQiitaData() {
-//      apiClient.getItems(page: currentPage) { [weak self] result in
-//          switch result {
-//          case .success(let response):
-//              self?.currentItems = response.items
-//              self?.delegate?.onSuccess(with: response.items, isReachLastPage: false)
-//          case .failure(let error):
-//              self?.delegate?.onError(with: error)
-//          }
-//      }
-//  }
+  // MARK: - Delete articles data
+  //DBのお気に入りの記事データを削除する
+    func deleteBookmarkArticles(title: String, profileImageURL: String, body: String, tags: String, url: String) {
+        //DBに直接アクセス
+        dao.deleteData(title: [title], profileImageURL: [profileImageURL], body: [body], tags: [tags], url: [url])
+    }
     
 }

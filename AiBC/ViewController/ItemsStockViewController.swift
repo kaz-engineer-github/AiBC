@@ -92,13 +92,13 @@ extension ItemsStockViewController: UITableViewDataSource {
         return cell
     }
   
-//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-//        if editingStyle == UITableViewCell.EditingStyle.delete {
-//            itemsStockModel.trashBookmarkArticles(title: fetchArticleData.titleArray[indexPath.row], profileImageURL: fetchArticleData.profileImageURLArray[indexPath.row], body: fetchArticleData.bodyArray[indexPath.row], tags: fetchArticleData.tagsArray[indexPath.row], url: fetchArticleData.urlArray[indexPath.row])
-////            fetchArticleData.titleArray.remove(at: indexPath.row)
-//        }
-//        tableView.reloadData()
-//    }
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+            itemsStockModel.deleteBookmarkArticles(title: fetchArticleData.titleArray[indexPath.row], profileImageURL: fetchArticleData.profileImageURLArray[indexPath.row], body: fetchArticleData.bodyArray[indexPath.row], tags: fetchArticleData.tagsArray[indexPath.row], url: fetchArticleData.urlArray[indexPath.row])
+                fetchArticleData.titleArray.remove(at: indexPath.row)
+        }
+        tableView.reloadData()
+    }
 }
 
 extension ItemsStockViewController: UITableViewDelegate {

@@ -55,7 +55,7 @@ class WebViewController: UIViewController, FaveButtonDelegate {
             articleData.isLiked = true
             print("ブクマされた")
         } else {
-//            bookmark.passTrashBookmarkArticles(title: articleData.title, profileImageURL: articleData.profileImageURL!, body: articleData.body, tags: articleData.tags, url: articleData.url)
+            bookmark.deleteBookmarkArticles(title: articleData.title, profileImageURL: articleData.profileImageURL!, body: articleData.body, tags: articleData.tags, url: articleData.url)
             articleData.isLiked = false
             print("ブクマ解除された")
         }

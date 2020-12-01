@@ -50,5 +50,28 @@ final class Dao {
         }
     }
   
-
+    // MARK: - Access DB to delete articles data
+    //DBに直接アクセスして、記事データを削除
+    func deleteData(title: [String], profileImageURL: [String], body: [String], tags: [String], url: [String]) {
+        let ref = db.collection(Constants.FStore.collectionName).document(Constants.FStore.documentName)
+        //データがあるか読み取り
+        ref.getDocument { (document, error) in
+            if let document = document, document.exists {
+                //データの削除
+                ref.updateData([
+                    Constants.FStore.titleField: FieldValue.arrayRemove(title),
+                    Constants.FStore.profField: FieldValue.arrayRemove(profileImageURL),
+                    Constants.FStore.bodyField: FieldValue.arrayRemove(body),
+                    Constants.FStore.tagsField: FieldValue.arrayRemove(tags),
+                    Constants.FStore.urlField: FieldValue.arrayRemove(url)
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                    }
+                }
+            }
+        }
+    }
 }
