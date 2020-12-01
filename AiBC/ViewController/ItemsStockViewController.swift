@@ -96,6 +96,10 @@ extension ItemsStockViewController: UITableViewDataSource {
         if editingStyle == UITableViewCell.EditingStyle.delete {
             itemsStockModel.deleteBookmarkArticles(title: fetchArticleData.titleArray[indexPath.row], profileImageURL: fetchArticleData.profileImageURLArray[indexPath.row], body: fetchArticleData.bodyArray[indexPath.row], tags: fetchArticleData.tagsArray[indexPath.row], url: fetchArticleData.urlArray[indexPath.row])
                 fetchArticleData.titleArray.remove(at: indexPath.row)
+                fetchArticleData.profileImageURLArray.remove(at: indexPath.row)
+                fetchArticleData.bodyArray.remove(at: indexPath.row)
+                fetchArticleData.tagsArray.remove(at: indexPath.row)
+                fetchArticleData.urlArray.remove(at: indexPath.row)
         }
         tableView.reloadData()
     }
