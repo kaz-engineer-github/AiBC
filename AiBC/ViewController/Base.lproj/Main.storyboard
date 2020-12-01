@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Items Search View Controller-->
+        <!--⛅️AiBC-->
         <scene sceneID="a6L-DJ-wgm">
             <objects>
                 <viewController id="PiD-fu-9Op" customClass="ItemsSearchViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,7 +36,7 @@
                             <constraint firstItem="JOq-x4-MJY" firstAttribute="trailing" secondItem="db2-z0-gLb" secondAttribute="trailing" id="wKC-ii-8Fz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="grR-xo-ydV"/>
+                    <navigationItem key="navigationItem" title="⛅️AiBC" id="grR-xo-ydV"/>
                     <connections>
                         <outlet property="searchBar" destination="1Lf-bG-Ff6" id="f1b-aQ-SRx"/>
                         <outlet property="tableView" destination="JOq-x4-MJY" id="vai-z9-rSD"/>
@@ -47,7 +47,7 @@
             </objects>
             <point key="canvasLocation" x="6567" y="661"/>
         </scene>
-        <!--Items View Controller-->
+        <!--⛅️AiBC-->
         <scene sceneID="1nx-wA-rFK">
             <objects>
                 <viewController id="rln-YP-MEy" customClass="ItemsViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,7 +69,7 @@
                             <constraint firstItem="eNg-ld-P4w" firstAttribute="trailing" secondItem="3Kl-AT-41B" secondAttribute="trailing" id="yZ5-iA-2aj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4yt-aW-0fU"/>
+                    <navigationItem key="navigationItem" title="⛅️AiBC" id="4yt-aW-0fU"/>
                     <connections>
                         <outlet property="tableView" destination="eNg-ld-P4w" id="iJU-pG-oVD"/>
                         <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="jdD-m2-seZ"/>
@@ -79,7 +79,7 @@
             </objects>
             <point key="canvasLocation" x="6396" y="-591"/>
         </scene>
-        <!--Web View Controller-->
+        <!--⛅️AiBC-->
         <scene sceneID="p7L-Xw-F1p">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="uq8-mx-Aa1" customClass="WebViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
@@ -97,16 +97,17 @@
                             </wkWebView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Hq-RT-FA5">
                                 <rect key="frame" x="0.0" y="603" width="375" height="44"/>
+                                <color key="backgroundColor" red="0.86312836410000005" green="1" blue="0.90586227180000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <items>
                                     <barButtonItem title="&lt;" id="vA1-jy-2P3">
-                                        <color key="tintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0002197995054" green="0.72903478150000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="backPage:" destination="uq8-mx-Aa1" id="5X3-lY-4Dv"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="bIi-4n-bcw"/>
                                     <barButtonItem title="&gt;" id="j63-S5-d6X">
-                                        <color key="tintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="tintColor" red="0.0002197995054" green="0.72903478150000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <connections>
                                             <action selector="goPage:" destination="uq8-mx-Aa1" id="zzV-rM-wVV"/>
                                         </connections>
@@ -126,7 +127,9 @@
                             <constraint firstItem="9Hq-RT-FA5" firstAttribute="bottom" secondItem="I77-sN-vjY" secondAttribute="bottom" id="vBe-Vs-Y8B"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="vk2-ei-Q8G"/>
+                    <navigationItem key="navigationItem" title="⛅️AiBC" id="vk2-ei-Q8G">
+                        <barButtonItem key="backBarButtonItem" title="back" id="cMB-Q1-dEu"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView" destination="vfF-S6-5sD" id="dfA-cv-4u2"/>
                     </connections>
@@ -135,7 +138,7 @@
             </objects>
             <point key="canvasLocation" x="7302" y="-690"/>
         </scene>
-        <!--Items Stock View Controller-->
+        <!--⛅️AiBC-->
         <scene sceneID="7j2-aw-6Fk">
             <objects>
                 <viewController id="UAs-Fz-OGn" customClass="ItemsStockViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
@@ -157,7 +160,7 @@
                             <constraint firstItem="bCX-wc-1FL" firstAttribute="top" secondItem="4ib-N8-Kpp" secondAttribute="top" id="xtc-P6-chI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="HZI-jc-xKO"/>
+                    <navigationItem key="navigationItem" title="⛅️AiBC" id="HZI-jc-xKO"/>
                     <connections>
                         <outlet property="tableView" destination="bCX-wc-1FL" id="DIe-4j-yUj"/>
                         <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="ETU-My-JYD"/>
@@ -207,7 +210,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="selectedImageTintColor" red="0.45085787770000002" green="0.98829740290000001" blue="0.83763033149999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="selectedImageTintColor" red="0.0053737756106373314" green="0.71286088197969544" blue="0.061936773669523611" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="CZU-KF-hxe" kind="relationship" relationship="viewControllers" id="Njy-EF-uqY"/>
@@ -228,6 +231,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="IyI-ix-YAu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GkY-kW-8nx">
@@ -251,6 +255,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pkD-VS-MEU">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -270,6 +275,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TSx-kA-329">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -290,6 +296,9 @@
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
