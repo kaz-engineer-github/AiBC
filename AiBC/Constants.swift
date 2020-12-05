@@ -9,6 +9,7 @@
 struct Constants {
     
     struct Segue {
+        static let titleSegue = "titleViewController"
         static let webViewSegue = "WebViewController"
         static let tabBarSegue = "tabBarController"
     }
