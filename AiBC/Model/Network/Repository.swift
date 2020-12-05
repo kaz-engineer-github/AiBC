@@ -31,19 +31,14 @@ final class Repository {
   //記事データを取得する
     func fetchBookmarkArticles() {
         let ref = db.collection(Constants.FStore.collectionName).document(Constants.FStore.documentName)
-      ref.getDocument { [self] (document, error) in
+        ref.getDocument { [self] (document, error) in
             if let document = document, document.exists {
                 guard let titleData = document.data(), let title = Titles(data: titleData) else { return }
-                    self.articleData.titleArray.append(contentsOf: title.articleTitles)
                     guard let bodyData = document.data(), let body = Bodys(data: bodyData) else { return }
-                    self.articleData.bodyArray.append(contentsOf: body.articleBodys)
                     guard let profileImageUrlData = document.data(), let profileImageUrl = ProfileImageUrls(data: profileImageUrlData) else { return }
-                    self.articleData.profileImageURLArray.append(contentsOf: profileImageUrl.profileImageUrl)
                     guard let tagsData = document.data(), let tags = Tags(data: tagsData) else { return }
-                    self.articleData.tagsArray.append(contentsOf: tags.articleTags)
                     guard let urlData = document.data(), let url = Urls(data: urlData) else { return }
-                    self.articleData.urlArray.append(contentsOf: url.articleUrl)
-                self.delegate?.fetchBookmarkArticles(title: articleData.titleArray,profileImageURL: articleData.profileImageURLArray, body: articleData.bodyArray, tags: self.articleData.tagsArray, url: articleData.urlArray)
+                    self.delegate?.fetchBookmarkArticles(title: title.articleTitles,profileImageURL: profileImageUrl.profileImageUrl, body: body.articleBodys, tags: tags.articleTags, url: url.articleUrl)
             } else {
                 print("Document does not exist")
             }
