@@ -29,6 +29,8 @@ class WebViewController: UIViewController, FaveButtonDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        self.navigationController?.navigationBar.barTintColor = UIColor(red: 220/255.0, green: 255/255.0, blue: 231/255.0, alpha: 1.0)
+      
         // MARK: - bookmarkButton
         bookmarkButton = FaveButton(
           frame: CGRect(x:view.frame.size.width - view.frame.size.width/6, y:view.frame.size.height - view.frame.size.height/6, width: 50, height: 50),

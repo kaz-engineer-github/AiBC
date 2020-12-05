@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--⛅️AiBC-->
+        <!--SEARCH-->
         <scene sceneID="a6L-DJ-wgm">
             <objects>
                 <viewController id="PiD-fu-9Op" customClass="ItemsSearchViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
@@ -36,18 +36,18 @@
                             <constraint firstItem="JOq-x4-MJY" firstAttribute="trailing" secondItem="db2-z0-gLb" secondAttribute="trailing" id="wKC-ii-8Fz"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="⛅️AiBC" id="grR-xo-ydV"/>
+                    <navigationItem key="navigationItem" title="SEARCH" id="grR-xo-ydV"/>
                     <connections>
                         <outlet property="searchBar" destination="1Lf-bG-Ff6" id="f1b-aQ-SRx"/>
                         <outlet property="tableView" destination="JOq-x4-MJY" id="vai-z9-rSD"/>
-                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="FZG-mh-02C"/>
+                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="eMi-1G-gng"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FQc-WD-VsJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6567" y="661"/>
         </scene>
-        <!--⛅️AiBC-->
+        <!--HOME-->
         <scene sceneID="1nx-wA-rFK">
             <objects>
                 <viewController id="rln-YP-MEy" customClass="ItemsViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
@@ -69,10 +69,10 @@
                             <constraint firstItem="eNg-ld-P4w" firstAttribute="trailing" secondItem="3Kl-AT-41B" secondAttribute="trailing" id="yZ5-iA-2aj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="⛅️AiBC" id="4yt-aW-0fU"/>
+                    <navigationItem key="navigationItem" title="HOME" id="4yt-aW-0fU"/>
                     <connections>
                         <outlet property="tableView" destination="eNg-ld-P4w" id="iJU-pG-oVD"/>
-                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="jdD-m2-seZ"/>
+                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="Fg7-t2-OSS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="VVH-r5-W3H" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -136,9 +136,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFw-yX-Fem" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7302" y="-690"/>
+            <point key="canvasLocation" x="8240.7999999999993" y="-690.40479760119945"/>
         </scene>
-        <!--⛅️AiBC-->
+        <!--MY STOCK-->
         <scene sceneID="7j2-aw-6Fk">
             <objects>
                 <viewController id="UAs-Fz-OGn" customClass="ItemsStockViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
@@ -160,10 +160,10 @@
                             <constraint firstItem="bCX-wc-1FL" firstAttribute="top" secondItem="4ib-N8-Kpp" secondAttribute="top" id="xtc-P6-chI"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="⛅️AiBC" id="HZI-jc-xKO"/>
+                    <navigationItem key="navigationItem" title="MY STOCK" id="HZI-jc-xKO"/>
                     <connections>
                         <outlet property="tableView" destination="bCX-wc-1FL" id="DIe-4j-yUj"/>
-                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="ETU-My-JYD"/>
+                        <segue destination="uq8-mx-Aa1" kind="show" identifier="WebViewController" id="Eqa-DG-ASk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UKS-x7-gie" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -288,7 +288,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="jdD-m2-seZ"/>
+        <segue reference="Fg7-t2-OSS"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
