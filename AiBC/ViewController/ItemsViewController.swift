@@ -85,18 +85,18 @@ extension ItemsViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cellType = dataSource[indexPath.row]
         
-            switch cellType {
-            case .item(let item):
-                articleData.title = item.title
-                articleData.profileImageURL = item.user.profileImageURL
-                articleData.body = item.body
-                articleData.tags = item.tags.reduce("") { $0 + "#\($1.name) " }
-                articleData.url = item.url
-              
-                self.performSegue(withIdentifier: Constants.Segue.webViewSegue, sender: nil)
-            default:
-                break
-            }
+        switch cellType {
+        case .item(let item):
+            articleData.title = item.title
+            articleData.profileImageURL = item.user.profileImageURL
+            articleData.body = item.body
+            articleData.tags = item.tags.reduce("") { $0 + "#\($1.name) " }
+            articleData.url = item.url
+          
+            self.performSegue(withIdentifier: Constants.Segue.webViewSegue, sender: nil)
+        default:
+            break
+        }
     }
   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
