@@ -218,10 +218,10 @@
 		749BFED42508B48600A3753B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				74B9B9802507B8AA0037D96F /* Main.storyboard */,
 				7439A3122528544B0011AB51 /* RootViewController.swift */,
 				74C01763257BBF52005C3F70 /* TitleViewController.swift */,
 				74C01769257DAFCA005C3F70 /* RegisterViewController.swift */,
-				74B9B9802507B8AA0037D96F /* Main.storyboard */,
 				74D018F2250998E2004DC3C7 /* ItemsViewController.swift */,
 				74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */,
 				74972D94250BA17C00598B86 /* WebViewController.swift */,
