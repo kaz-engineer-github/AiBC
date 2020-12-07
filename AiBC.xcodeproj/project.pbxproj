@@ -16,6 +16,7 @@
 		7439A3022526DBC20011AB51 /* QiitaItemsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7439A3012526DBC20011AB51 /* QiitaItemsResponse.swift */; };
 		7439A3132528544B0011AB51 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7439A3122528544B0011AB51 /* RootViewController.swift */; };
 		7439A35025285DE30011AB51 /* 1.json in Resources */ = {isa = PBXBuildFile; fileRef = 7439A34F25285DE30011AB51 /* 1.json */; };
+		744F346C257DBFC100750E17 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F346B257DBFC100750E17 /* LoginViewController.swift */; };
 		746B02AB25411A410072C51B /* Dao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B02AA25411A410072C51B /* Dao.swift */; };
 		746B02B125411A4E0072C51B /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B02B025411A4E0072C51B /* Repository.swift */; };
 		746B8CDF2529798900200D1E /* ItemsSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 746B8CDE2529798900200D1E /* ItemsSearchViewController.swift */; };
@@ -69,6 +70,7 @@
 		7439A3012526DBC20011AB51 /* QiitaItemsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QiitaItemsResponse.swift; sourceTree = "<group>"; };
 		7439A3122528544B0011AB51 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		7439A34F25285DE30011AB51 /* 1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 1.json; sourceTree = "<group>"; };
+		744F346B257DBFC100750E17 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		746B02AA25411A410072C51B /* Dao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dao.swift; sourceTree = "<group>"; };
 		746B02B025411A4E0072C51B /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		746B8CDE2529798900200D1E /* ItemsSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemsSearchViewController.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				7439A3122528544B0011AB51 /* RootViewController.swift */,
 				74C01763257BBF52005C3F70 /* TitleViewController.swift */,
 				74C01769257DAFCA005C3F70 /* RegisterViewController.swift */,
+				744F346B257DBFC100750E17 /* LoginViewController.swift */,
 				74D018F2250998E2004DC3C7 /* ItemsViewController.swift */,
 				74972D84250B95D700598B86 /* ItemsViewControllerCellType.swift */,
 				74972D94250BA17C00598B86 /* WebViewController.swift */,
@@ -499,6 +502,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				744F346C257DBFC100750E17 /* LoginViewController.swift in Sources */,
 				74C0176A257DAFCA005C3F70 /* RegisterViewController.swift in Sources */,
 				7429ACA32518C48000341657 /* ArticleData.swift in Sources */,
 				7439A2FA2526CDFB0011AB51 /* Secrets.swift in Sources */,

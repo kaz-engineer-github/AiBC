@@ -268,10 +268,10 @@
             </objects>
             <point key="canvasLocation" x="3601" y="149"/>
         </scene>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="dCW-eK-brq">
             <objects>
-                <viewController id="yza-hi-LQi" sceneMemberID="viewController">
+                <viewController id="yza-hi-LQi" customClass="LoginViewController" customModule="AiBC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jNe-Dl-3w5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -539,7 +539,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="D3q-2i-Pig"/>
+        <segue reference="Fx2-LD-6ea"/>
         <segue reference="Fg7-t2-OSS"/>
     </inferredMetricsTieBreakers>
     <resources>
