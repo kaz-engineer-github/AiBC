@@ -8,6 +8,8 @@
 
 struct Constants {
     
+    static let appName = "🌤AiBC"
+    
     struct Segue {
         static let titleSegue = "titleViewController"
         static let webViewSegue = "WebViewController"

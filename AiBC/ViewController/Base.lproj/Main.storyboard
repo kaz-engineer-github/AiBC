@@ -260,6 +260,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SSS-to-zE0"/>
+                    <connections>
+                        <outlet property="titleLabel" destination="M9C-n6-xQb" id="ZbX-U2-8ss"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy9-Xc-5Qe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

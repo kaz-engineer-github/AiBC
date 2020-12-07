@@ -9,22 +9,20 @@
 import UIKit
 
 class TitleViewController: UIViewController {
-
+  
+    @IBOutlet weak var titleLabel: UILabel!
+  
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        titleLabel.text = ""
+        var charaIndex = 0.0
+        let titleText = Constants.appName
+      
+        for letter in titleText {
+            Timer.scheduledTimer(withTimeInterval: 0.2 * charaIndex, repeats: false) { (timer) in
+                self.titleLabel.text?.append(letter)
+            }
+            charaIndex += 1
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
