@@ -7,6 +7,7 @@ target 'AiBC' do
   pod 'Firebase'
   pod 'Firebase/Core'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Auth'
   pod 'Kingfisher'
   pod 'Alamofire'
   pod 'lottie-ios'
