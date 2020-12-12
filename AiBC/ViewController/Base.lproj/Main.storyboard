@@ -479,6 +479,7 @@
                         <segue destination="CZU-KF-hxe" kind="relationship" relationship="viewControllers" id="Njy-EF-uqY"/>
                         <segue destination="aKO-bV-SxB" kind="relationship" relationship="viewControllers" id="qXP-Ji-fLi"/>
                         <segue destination="Rf2-5i-Bc2" kind="relationship" relationship="viewControllers" id="Rus-vL-8g6"/>
+                        <segue destination="QaS-yO-rKD" kind="relationship" relationship="viewControllers" id="2pO-Xk-LEA"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="siP-pZ-fzu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -528,6 +529,22 @@
             </objects>
             <point key="canvasLocation" x="8240.7999999999993" y="124.58770614692655"/>
         </scene>
+        <!--ANALYTICS-->
+        <scene sceneID="GIt-nr-V07">
+            <objects>
+                <viewController id="ZMW-ty-dUf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2RD-gA-y7Q">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="FXs-DJ-Mm2"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="ANALYTICS" id="iuc-LS-Iyi"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Taf-Ql-DXY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7687.1999999999998" y="1465.8170914542729"/>
+        </scene>
         <!--SEARCH-->
         <scene sceneID="X0C-RE-KMd">
             <objects>
@@ -548,15 +565,36 @@
             </objects>
             <point key="canvasLocation" x="6748" y="660.71964017991013"/>
         </scene>
+        <!--ANALYTICS-->
+        <scene sceneID="qJK-tt-mqN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="QaS-yO-rKD" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="ANALYTICS" image="square.and.pencil" catalog="system" id="tZl-ha-pr9"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5gh-PH-qbC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ZMW-ty-dUf" kind="relationship" relationship="rootViewController" id="o7O-Li-T4n"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oNH-up-PBm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6748" y="1465.8170914542729"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="Fx2-LD-6ea"/>
-        <segue reference="Fg7-t2-OSS"/>
+        <segue reference="eMi-1G-gng"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bookmark" catalog="system" width="112" height="128"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="square.and.pencil" catalog="system" width="128" height="115"/>
         <image name="textfield" width="298" height="93"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
