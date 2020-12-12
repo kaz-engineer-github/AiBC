@@ -9,6 +9,7 @@
 import UIKit
 import WebKit
 import FaveButton
+import Firebase
 
 func color(_ rgbColor: Int) -> UIColor{
     return UIColor(
@@ -44,6 +45,15 @@ class WebViewController: UIViewController, FaveButtonDelegate {
         webView.load(request)
     }
   
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+      
+        Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+            AnalyticsParameterContent: articleData.url,
+            AnalyticsParameterContentType: articleData.tags
+        ])
+    }
+  
     // MARK: - Tap bookmarkButton
     func faveButton(_ faveButton: FaveButton, didSelected selected: Bool) {
         if articleData.isLiked == false {
@@ -53,6 +63,12 @@ class WebViewController: UIViewController, FaveButtonDelegate {
             let bookmarkTags = articleData.tags
             let bookmarkURL = articleData.url
             bookmark.updateBookmarkArticles(title: bookmarkTitle, profileImageURL: bookmarkProfileImageURL, body: bookmarkBody, tags: bookmarkTags, url: bookmarkURL)
+          
+            Analytics.logEvent(AnalyticsEventSelectContent, parameters: [
+                AnalyticsParameterContent: articleData.url,
+                AnalyticsParameterContentType: articleData.tags
+            ])
+          
             //ブクマされた状態を維持する
             articleData.isLiked = true
             print("ブクマされた")
